@@ -1,0 +1,597 @@
+/* ____________________________________________________________________ */
+/* ______________________Ajustes INICIALES  ___________________________ */
+/* ____________________________________________________________________ */
+
+/* Declaración y uso de fuente */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Limpieza de paddings y margins - Reset CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0px
+}
+
+:root {
+    --color_principal: #5718c4;
+}
+
+/* Tamaño de textos */
+
+h1,.main-headline {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+p{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Ajuste para titulos secundarios */
+
+.titulo-secundario{
+    text-align: center;
+    margin: 4rem 0rem 4rem 0rem;
+}
+
+/* Fuentes de color blanco */
+
+.texto_invert{
+    color: white;
+}
+
+/* Fuentes en bold */
+
+.bold{
+    font-weight: bold;
+}
+
+/* ____________________________________________________________________ */
+/* ______________________Ajustes de NAV     ___________________________ */
+/* ____________________________________________________________________ */
+
+/* Ajustar Nav links */
+
+.ajuste-nav{
+    flex-grow: 0;
+}
+
+nav ul li{
+    margin-right: 1rem;
+}
+
+.nav__links__color{
+    color: black;
+}
+
+.nav__links__color:hover{
+    color: var(--color_principal) !important;
+}
+
+.pagina-actual-nav{
+    color: var(--color_principal) !important;
+    font-weight: bold;
+}
+
+/* Sticky nav */
+
+.navegacion-sticky{
+    position: sticky;
+    top: 1rem;
+    z-index: 10;
+}
+
+/* control de botton para primary nav */
+
+.nav-button-ct{
+    border: none;
+    padding: 0;
+}
+
+/* Clases para secondary nav */
+
+.sec-nav{
+    background-color: transparent;
+}
+
+.background-icon{
+    opacity: 0.5;
+    padding-left: 1.5rem;
+    margin-right: 1.2rem;
+    border-left: 2px;
+    border-color: #1E1E1E;
+    border-style: solid;
+}
+
+.current-selected-icon{
+    padding-left: 1.5rem;
+    margin-right: 1.2rem;
+    border-left: 2px;
+    border-color: #1E1E1E;
+    border-style: solid;
+}
+
+.no-bullets{
+    list-style: none;
+}
+
+
+/* ____________________________________________________________________ */
+/* ______________________Ajustes de IMAGENES___________________________ */
+/* ____________________________________________________________________ */
+
+
+/* Ajuste general de imagenes */
+
+img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    object-fit: cover;
+}
+
+/* clase para assets de header, footer y logos */
+
+.iconos {
+    display: inline-block;
+    height: 50px;
+    max-width: min-content;
+    min-width: min-content;
+}
+
+/* Fondo para contenido sobre imagen */
+
+.contenedor{
+    position: relative;
+}
+
+div.contenedor{
+    line-height: 0;
+}
+
+.sobre-imagen{
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: normal;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.bajo-mh-overlay-sm{
+    line-height: normal;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.bajo-mh-overlay-sm p{
+    margin-bottom: 0px;
+    text-align: start;
+}
+
+/* ____________________________________________________________________ */
+/* ______________________Ajustes de BOTONES ___________________________ */
+/* ____________________________________________________________________ */
+
+button{
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.primario{
+    text-transform: uppercase;  
+    background-color: white;
+    border-radius: 10px;
+}
+
+.secundario{
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.text-link-prp{
+    text-align: left;
+    text-decoration: underline;
+    padding-left: 0;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.dot-prp{
+    border-radius: 100%;
+    background-color: #d9d9d9;
+    height: 43px;
+    width: 43px;
+    padding: 0;
+}
+
+.dot-prp:active{
+    background-color: var(--color_principal);
+}
+
+/* Clase para control de dots */
+
+.control-dot{
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* ____________________________________________________________________ */
+/* ______________________Ajustes de COMPONENTES________________________ */
+/* ____________________________________________________________________ */
+
+/* Clase para cajas grises */
+
+.gray-background {
+    background-color: #e1e1e1;
+    padding: 1rem;
+    border-radius: 20px;
+    /* margin: 1rem; */
+    overflow: hidden;
+    align-items: stretch;
+}
+
+/* Clase para div con borde izquierdo y padding */
+
+.left-border{
+    border: 0;
+    border-left: 2px;
+    border-color: #1E1E1E;
+    border-style: solid;
+    padding-left: 1rem;
+    margin-right: 1rem;
+}
+
+.left-border ul{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* espaciado para contenido de tarjetas */
+
+.card-personal{
+    padding: 1rem 0rem 1rem 0rem;
+    flex-basis: 100%;
+}
+
+.card-content{
+    padding: 1rem;
+}
+
+/* Estilo de secciones */
+
+section{
+    margin-bottom: 4rem;
+}
+
+/* margen de página */
+
+.page-margin{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+/* estilos para cards de offers */
+
+.offers-card{
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+    overflow: hidden;
+
+}
+
+.separator-line{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-bottom: 2px;
+    border-color: #1E1E1E;
+    border-style: solid;
+}
+
+/* Clase para card de tipo de servicio */
+
+.product-card{
+    padding-left: 2rem; 
+    border-left: 2px; 
+    border-style: solid;
+    border-color: #1E1E1E;
+}
+
+.product-card li{
+    padding-left: 2rem;
+    list-style-position: inside;
+}
+
+/* Estilo de expander para FAQ */
+
+.expander-head {
+    background-color: #c8c8c8;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.expander-body{
+    background-color: #e1e1e1;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+    overflow: hidden;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: 2rem;
+    margin-top: 0rem;
+    width: 93%;
+    text-align: center;
+}
+
+/* ____________________________________________________________________ */
+/* ______________________Uso de FLEX y GRID    ________________________ */
+/* ____________________________________________________________________ */
+
+/* Uso general de flex */
+
+.clm-btwn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.rw-btwn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rw-evnl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Uso general de grids */
+
+.grid-contenedor-noticias{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(30vh,75vh));
+    place-content: start;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    scrollbar-width: none;
+}
+
+.grid-contenedor-ofertas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-content: start;
+    padding: 0; 
+}
+
+.ofertas-external-grid{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    gap: 1rem;
+    scrollbar-width: none;
+}
+
+.order-grid-item-reverse{
+    order: -1;
+}
+
+
+/* ____________________________________________________________________ */
+/* ______________________Ajuste de FORMS_______________________________ */
+/* ____________________________________________________________________ */
+
+
+select{
+    border-width: 0px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form label{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+input {
+    border-width: 0px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+form textarea {
+    border-width: 0px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 2rem;
+    width: 100%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-transform: uppercase;  
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+/* ____________________________________________________________________ */
+/* ______________________Seteo de ANIMACIONES__________________________ */
+/* ____________________________________________________________________ */
+
+
+/* transición de mh */
+
+.mh-scroll {
+    overflow-x: hidden;
+}
+
+.mh-scroll-content {
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    place-content: start;
+    animation: autoScroll 15s infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes autoScroll {
+    0%, 45% { transform: translateX(0); }
+    55%, 95% { transform: translateX(-100%); }
+}
+
+/* auto snap de scrollers */
+
+.at-snp-srl{
+    scroll-snap-type: x mandatory;
+    scroll-behavior:smooth;
+}
+
+.at-snp-srl-obj{
+    scroll-snap-align: center;
+}
+
+
+/* ____________________________________________________________________ */
+/* ______________________Clases de UTILIDAD ___________________________ */
+/* ____________________________________________________________________ */
+
+
+/* Clase para ocultar en desktop */
+
+.hide-dkt{
+    display: none;
+}
+
+/* Margin de 2 rem personalizado */
+
+.mb-2rem-personal{
+    margin-bottom: 2rem;
+}
+
+/* Clase para ocultar barra de desplazamiento */
+
+.hide-scrollbar{
+    scrollbar-width: none;
+}
+
+
+/* ____________________________________________________________________ */
+/* ______________________RESPONSIVE____________________________________ */
+/* ____________________________________________________________________ */
+
+
+@media (max-width: 991px) {
+    h1,.main-headline {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+    
+    .page-margin{
+        margin: 0rem 1rem 0rem 1rem;
+    }
+
+    .order-grid-item-reverse{
+        order: 1;
+    }
+
+    .ofertas-external-grid{
+        grid-template-columns: repeat(2,100%);
+        place-content: start;
+        overflow-x: scroll;
+    }
+
+    .grid-contenedor-ofertas{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 0rem;
+    }
+
+    .hide-small{
+        display: none;
+    }
+
+    .show-small{
+        display: inline-block;
+    }
+
+    .fsm{
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .width-fixed-button-sm{
+        width: 100%;
+    }
+}
