@@ -258,19 +258,18 @@ button{
 .tab-style-fix{
     background: #000000;
     background: linear-gradient(180deg,rgba(0, 0, 0, 0) 77%, rgba(87, 24, 196, 0.29) 100%);
-    min-width: 0px;
 }
 
 .tab-style-fix:focus{
-    background-color: rgb(251, 255, 0);
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0) 77%, rgba(87, 24, 196, 0.29) 100%);
 }
 
 .tab-style-fix:active{
-    background-color: rgb(0, 255, 21);
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0) 50%, rgba(87, 24, 196, 0.29) 100%);
 }
 
 .tab-style-fix:hover{
-    background-color: rgb(255, 0, 0);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 50%, rgba(87, 24, 196, 0.29) 100%);
 }
 
 #tabCategorias{
@@ -489,18 +488,19 @@ form label{
     margin-bottom: 0;
 }
 
-input {
+input#estrenos,#servicio-est {
     border-width: 0px;
-    padding: 0.5rem;
     border-radius: 10px;
-    margin-right: 2rem;
+    width: 38px;
+    height: 38px;
+    background-color: var(--color_principal);
+    margin-top: 0px;
 }
 
 form textarea {
     border-width: 0px;
     padding: 0.5rem;
     border-radius: 10px;
-    margin-right: 2rem;
     width: 100%;
 }
 
@@ -644,6 +644,7 @@ input[type=button], input[type=submit], input[type=reset] {
 
     .product-card{
         padding-top: 2rem;
+        padding: 2rem 1rem 0rem 1rem;
         border-left: none;
         border-top: 2px solid #1E1E1E;
     }
@@ -659,6 +660,23 @@ input[type=button], input[type=submit], input[type=reset] {
 
     #tabCategorias button{
         width: 100%;
+    }
+
+    /* ajuste de fondo mobile de noticias y ofertas */
+
+    #fondo-offers-news{
+        padding: 0px;
+        margin: 0px;
+        background-color: transparent;
+    }
+
+    #fondo-offers-news>.offers-card{
+        margin: 0rem 0rem 2rem 0rem;
+        background-color: #e1e1e1;
+    }
+
+    #fondo-offers-news>.offers-card:last-child{
+        margin: 0px;
     }
 }
 

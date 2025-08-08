@@ -50,52 +50,52 @@
             <h1 class="titulo-secundario">SERVICIOS EN OFERTA</h1>
             <div class="gray-background">
                 <form class="container-fluid" action="" method="post">
-                <div class="row gy-3">
-                    <!-- Género -->
-                    <div class="col-12 col-lg-4">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
-                        <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="genero">Género:</label>
-                        <select class="form-select flex-grow-1" name="genero" id="genero">
-                        <option value="comedia">Comedia</option>
-                        <option value="drama">Drama</option>
-                        <option value="romance">Romance</option>
-                        <option value="deportes">Deportes</option>
-                        </select>
-                    </div>
-                    </div>
+                    <div class="row gy-3">
+                        <!-- Género -->
+                        <div class="col-12 col-lg-4">
+                            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                                <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="genero">Género:</label>
+                                <select class="form-select flex-grow-1" name="genero" id="genero">
+                                    <option value="comedia">Comedia</option>
+                                    <option value="drama">Drama</option>
+                                    <option value="romance">Romance</option>
+                                    <option value="deportes">Deportes</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <!-- Precio -->
-                    <div class="col-12 col-lg-4">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
-                        <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="precio">Precio:</label>
-                        <select class="form-select flex-grow-1" name="precio" id="precio">
-                        <option value="2000">Max 2,000 COP</option>
-                        <option value="4000">Max 4,000 COP</option>
-                        <option value="7000">Max 7,000 COP</option>
-                        <option value="15000">Max 15,000 COP</option>
-                        </select>
-                    </div>
-                    </div>
+                        <!-- Precio -->
+                        <div class="col-12 col-lg-4">
+                            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                                <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="precio">Precio:</label>
+                                <select class="form-select flex-grow-1" name="precio" id="precio">
+                                    <option value="2000">Max 2,000 COP</option>
+                                    <option value="4000">Max 4,000 COP</option>
+                                    <option value="7000">Max 7,000 COP</option>
+                                    <option value="15000">Max 15,000 COP</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <!-- Modo -->
-                    <div class="col-12 col-lg-4">
-                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
-                        <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="modo">Modo:</label>
-                        <select class="form-select flex-grow-1" name="modo" id="modo">
-                        <option value="compartido">Compartido</option>
-                        <option value="individual">Individual</option>
-                        <option value="privado">Privado</option>
-                        <option value="multiple">Multiple</option>
-                        </select>
+                        <!-- Modo -->
+                        <div class="col-12 col-lg-4">
+                            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                                <label class="form-label me-lg-2 mb-1 mb-lg-0 flex-shrink-0" for="modo">Modo:</label>
+                                <select class="form-select flex-grow-1" name="modo" id="modo">
+                                    <option value="compartido">Compartido</option>
+                                    <option value="individual">Individual</option>
+                                    <option value="privado">Privado</option>
+                                    <option value="multiple">Multiple</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </form>
             </div>
         </section>
         <!-- Tarjetas de servicios -->
         <section>
-            <div class="gray-background container-fluid">
+            <div class="gray-background container-fluid" id="fondo-offers-news">
                 <div class="offers-card p-0 row">
                     <img class="col-12 col-lg-5 gx-0" src="../assets/img/shared-assets/fpoassets/fpo-4_3.jpg" alt="fpo">
                     <div class="card-content col-12 col-lg-7 clm-btwn">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="separator-line"></div>
+                <div class="separator-line hide-small"></div>
                 <div class="offers-card p-0 row">
                     <img class="col-12 col-lg-5 gx-0" src="../assets/img/shared-assets/fpoassets/fpo-4_3.jpg" alt="fpo">
                     <div class="card-content col-12 col-lg-7 clm-btwn">
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="separator-line"></div>
+                <div class="separator-line hide-small"></div>
                 <div class="offers-card p-0 row">
                     <img class="col-12 col-lg-5 gx-0" src="../assets/img/shared-assets/fpoassets/fpo-4_3.jpg" alt="fpo">
                     <div class="card-content col-12 col-lg-7 clm-btwn">
@@ -143,6 +143,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="control-dot">
+                <a href="#page-1"><button class="dot-prp"></button></a>
+                <a href="#page-2"><button class="dot-prp"></button></a>
+                <a href="#page-3"><button class="dot-prp"></button></a>
             </div>
         </section>
     </main>
