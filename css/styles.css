@@ -59,12 +59,6 @@ p{
     color: white;
 }
 
-/* Fuentes en bold */
-
-.bold{
-    font-weight: bold;
-}
-
 /* ____________________________________________________________________ */
 /* ______________________Ajustes de NAV     ___________________________ */
 /* ____________________________________________________________________ */
@@ -100,11 +94,23 @@ nav ul li{
     z-index: 10;
 }
 
+.navegacion-sticky>.gray-background{
+    background: rgba(210, 210, 210, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+}
+
 /* control de botton para primary nav */
 
 .nav-button-ct{
     border: none;
     padding: 0;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
 }
 
 /* Clases para secondary nav */
@@ -156,6 +162,11 @@ img{
     height: 50px;
     max-width: min-content;
     min-width: min-content;
+}
+
+a>img.iconos:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 /* Fondo para contenido sobre imagen */
@@ -216,6 +227,12 @@ button{
     border-radius: 10px;
 }
 
+.primario:hover{
+    transition: background-color 0.5s ease;
+    background-color: var(--color_principal);
+    color: white;
+}
+
 .secundario{
     text-transform: uppercase;
     background-color: white;
@@ -223,6 +240,12 @@ button{
     border-color: black;
     border-style: solid;
     border-width: 1px;
+}
+
+.secundario:hover{
+    transition: background-color 0.5s ease;
+    background-color: var(--color_principal);
+    color: white;
 }
 
 .text-link-prp{
@@ -233,6 +256,10 @@ button{
     text-underline-offset: 3px;
 }
 
+.text-link-prp:hover{
+    color: var(--color_principal);
+}
+
 .dot-prp{
     border-radius: 100%;
     background-color: #d9d9d9;
@@ -241,8 +268,23 @@ button{
     padding: 0;
 }
 
-.dot-prp:active{
+.dot-prp:hover{
+    transition: background-color 0.5s ease;
+    background-color: rgba(171, 31, 255, 0.39);
+    transition: transform background-color 0.3s ease;
+    transform: scale(1.1);
+}
+
+.dot-prp:focus{
+    transition: background-color transform 0.5s ease;
     background-color: var(--color_principal);
+    transform: scale(1.1)
+}
+
+.dot-prp:active{
+    transition: background-color 0.5s ease;
+    background-color: var(--color_principal);
+    transform: scale(1.1)
 }
 
 /* Clase para control de dots */
@@ -255,30 +297,28 @@ button{
 
 /* Ajuste de botones de tab nav de servicios */
 
-.tab-style-fix{
-    background: #000000;
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 77%, rgba(87, 24, 196, 0.29) 100%);
-}
-
-.tab-style-fix:focus{
-    background: linear-gradient(0deg,rgba(0, 0, 0, 0) 77%, rgba(87, 24, 196, 0.29) 100%);
-}
-
-.tab-style-fix:active{
-    background: linear-gradient(0deg,rgba(0, 0, 0, 0) 50%, rgba(87, 24, 196, 0.29) 100%);
-}
-
-.tab-style-fix:hover{
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 50%, rgba(87, 24, 196, 0.29) 100%);
-}
-
 #tabCategorias{
     max-height: 888px;
+    border: none;
+    flex-wrap: nowrap;
 }
 
 #tabCategorias img{
     max-width: 378px;
 }
+
+#tabCategorias>button{
+    border: none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#tabCategorias>button.nav-link.active{
+    transition: background-color 1.0s ease;
+    background-color: var(--color_principal);
+    color: white;
+}
+
 
 /* ____________________________________________________________________ */
 /* ______________________Ajustes de COMPONENTES________________________ */
@@ -290,7 +330,6 @@ button{
     background-color: #e1e1e1;
     padding: 1rem;
     border-radius: 20px;
-    /* margin: 1rem; */
     overflow: hidden;
     align-items: stretch;
 }
@@ -384,26 +423,37 @@ section{
 
 .expander-head {
     background-color: #c8c8c8;
-    padding: 1rem;
     border-radius: 20px;
     margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+}
+
+.expander-head button {
+    background-color: transparent;
 }
 
 .expander-body{
     background-color: #e1e1e1;
     padding: 1rem;
-    border-radius: 20px;
-    margin: 1rem;
+    border-radius: 0 0 20px 20px;
     overflow: hidden;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    margin-left: 2rem;
-    margin-top: 0rem;
-    width: 93%;
+    margin: 0rem 1.5rem;
     text-align: center;
 }
+
+p.expander-body{
+    margin-bottom: 0px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color_principal);
+    color: white;
+    border-radius: 20px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
 
 /* ____________________________________________________________________ */
 /* ______________________Uso de FLEX y GRID    ________________________ */
@@ -470,6 +520,12 @@ section{
     order: -1;
 }
 
+.grid-iredes-contacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
 
 /* ____________________________________________________________________ */
 /* ______________________Ajuste de FORMS_______________________________ */
@@ -483,44 +539,66 @@ select{
     width: 100%;
 }
 
+select.form-select:focus{
+    border-color: var(--color_principal);
+    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
 form label{
     font-weight: bold;
     margin-bottom: 0;
 }
 
+
 input#estrenos,#servicio-est {
     border-width: 0px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 38px;
     height: 38px;
-    background-color: var(--color_principal);
     margin-top: 0px;
 }
 
-form textarea {
-    border-width: 0px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 100%;
+input.form-check-input:focus{
+    border-color: var(--color_principal);
+    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+.form-check-input:checked{
+    background-color: var(--color_principal);
+    border-color: var(--color_principal);
+}
+
+textarea#mensaje-contacto {
+    height: 83%;
+}
+
+textarea#mensaje-contacto:focus {
+    border-color: var(--color_principal);
+    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+input.form-control:focus{
+    border-color: var(--color_principal);
+    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: transparent;
     border: none;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 18px;
     text-align: center;
-    vertical-align: middle;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.5rem 2rem;
     text-transform: uppercase;  
     background-color: white;
     border-radius: 10px;
     width: 100%;
 }
 
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    transition: background-color 0.5s ease;
+    background-color: var(--color_principal);
+    color: white;
+}
 
 /* ____________________________________________________________________ */
 /* ______________________Seteo de ANIMACIONES__________________________ */
@@ -555,6 +633,17 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .at-snp-srl-obj{
     scroll-snap-align: center;
+}
+
+/* Animación de flecha primary nav mobile */
+
+.navbar-toggler{
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+}
+
+button.navbar-toggler.collapsed{
+    transform: rotate(90deg);
 }
 
 
@@ -677,6 +766,18 @@ input[type=button], input[type=submit], input[type=reset] {
 
     #fondo-offers-news>.offers-card:last-child{
         margin: 0px;
+    }
+
+    /* Ajuste textarea para contacto en mobile */
+
+    textarea#mensaje-contacto {
+    height: auto;
+    }
+
+    /* Retirar hover en icono de primary para mobile */
+
+    a.navbar-brand>img.iconos:hover{
+        transform: none;
     }
 }
 

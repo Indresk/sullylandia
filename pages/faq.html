@@ -6,114 +6,165 @@
     <title>FAQ | Gestion de plataformas de streaming</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="../assets/img/index/logo01-v3-min.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <div class=gray-background>
-            <div>
-                <a href="../index.html"><img class=iconos src="../assets/img/index/logo-extended-01-v3.webp" alt="SullyLandia Logo"></a>
+    <header class="navegacion-sticky">
+        <nav class="navbar navbar-expand-lg gray-background rw-btwn m-3">
+            <div class="container-fluid gx-0 px-0 px-lg-3">
+            <a class="navbar-brand" href="../index.html">
+                <img class="iconos" src="../assets/img/index/logo-extended-01-v3.webp" alt="SullyLandia Logo">
+            </a>
+            <button class="navbar-toggler nav-button-ct collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="iconos" src="../assets/img/shared-assets/Icons/nav-arrow-rounded.svg" alt="Flecha navegación">
+            </button>
+            <div class="collapse navbar-collapse ajuste-nav px-3 px-lg-0" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link nav__links__color" href="../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav__links__color" href="../pages/ofertas.html">OFERTAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav__links__color" href="../pages/servicios.html">SERVICIOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav__links__color" href="../pages/noticias.html">NOTICIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav__links__color" href="../pages/contacto.html">CONTACTO</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link pagina-actual-nav" aria-current="page" href="../pages/faq.html">FAQ</a>
+                </li>
+                </ul>
             </div>
-            <div>
-                <nav>
-                    <ul style="list-style: none;">
-                        <il><a class="nav-link" href="./ofertas.html">OFERTAS</a></il>
-                        <il><a class="nav-link" href="./servicios.html">SERVICIOS</a></il>
-                        <il><a class="nav-link" href="./noticias.html">NOTICIAS</a></il>
-                        <il><a class="nav-link" href="./contacto.html">CONTACTO</a></il>
-                        <il><a class="nav-link" href="./faq.html">FAQ</a></il>
-                    </ul>
-                </nav>
             </div>
-        </div>
+        </nav>
     </header>
     <main class="page-margin">
         <section>
-            <div style="text-align: center; margin-bottom: 4rem; margin-top: 4rem;">
-                <h1>SI TIENES PREGUNTAS</h1>
-                <p style="font-weight: bold;">depronto algunas de las preguntas y respuestas más comunes te serán de ayuda</p>
-            </div>
+                <h1 class="titulo-secundario mb-0">SI TIENES PREGUNTAS</h1>
+                <p class="fw-bold text-center mb-0">depronto algunas de las preguntas y respuestas más comunes te serán de ayuda</p>
         </section>
-        <section>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Es cierto que ViX Premium ahora ofrece suscripciones a la órbita de Júpiter para ver telenovelas desde el espacio?</span>
+        <!-- Expander section -->
+        <section class="accordion accordion-flush" id="faqAccordion">
+            <div>
+                <h3 class="expander-head accordion-header" >
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a1" aria-expanded="true" aria-controls="flush-collapseOne">¿Es cierto que ViX Premium ahora ofrece suscripciones a la órbita de Júpiter para ver telenovelas desde el espacio?</button>
+                </h3>
+                <div id="faq-a1" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Absolutamente! A partir de agosto de 2025, nuestros suscriptores más leales podrán optar por el paquete "Galaxia Novela", que incluye una transmisión satelital directa para disfrutar de sus dramas favoritos desde un punto de vista verdaderamente cósmico, con la garantía de cero interrupciones de asteroides.</p>
+                </div>
             </div>
-                <div class="expander-body">
-                    <p>¡Absolutamente! A partir de agosto de 2025, nuestros suscriptores más leales podrán optar por el paquete "Galaxia Novela", que incluye una transmisión satelital directa para disfrutar de sus dramas favoritos desde un punto de vista verdaderamente cósmico, con la garantía de cero interrupciones de asteroides.</p>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a2" aria-expanded="false" aria-controls="faq-a2">
+                        ¿Plex Pass descarga recuerdos mentales?
+                    </button>
+                </h3>
+                <div id="faq-a2" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Exacto! Con la función "Memoria Stream" de Plex Pass, puedes exportar tus sueños o eventos pasados en video HD. Nuestro algoritmo avanzado convierte tus pensamientos en archivos multimedia, permitiéndote revivir o analizar tus recuerdos en la comodidad de tu sala. Es la personalización definitiva del entretenimiento.</p>
                 </div>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Plex Pass descarga recuerdos mentales?</span>
-            </div>  
-                <div class="expander-body">
-                    <p>¡Exacto! Con la función "Memoria Stream" de Plex Pass, puedes exportar tus sueños o eventos pasados en video HD. Nuestro algoritmo avanzado convierte tus pensamientos en archivos multimedia, permitiéndote revivir o analizar tus recuerdos en la comodidad de tu sala. Es la personalización definitiva del entretenimiento.</p>
-                </div> 
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Tele Latino tiene canal con alpacas?</span>
-            </div> 
-                <div class="expander-body">
-                    <p>¡Por supuesto! El canal "Alpacas al Aire" es una de nuestras joyas. Presentado íntegramente por un elenco de alpacas con un talento innato (y una colección de sombreros envidiable), ofrece noticias, entrevistas y musicales con un toque muy peculiar. Es un favorito instantáneo entre nuestros suscriptores.</p>
-                </div>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Jellyfin Premium incluye asistente holográfico para ropa?</span>
-            </div> 
-                <div class="expander-body">
-                    <p>¡Nos alegra que preguntes! La versión 2.0 de Jellyfin Premium incluye el módulo "Holograma Doméstico". Aunque su función principal es optimizar la biblioteca multimedia, sí, la configuración avanzada permite asignar tareas secundarias al asistente holográfico, como la clasificación de ropa por color y tejido. Solo asegúrate de que no confunda tus calcetines con subtítulos.</p>
-                </div>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Puedo viajar al pasado con ViX Premium para ver novelas?</span>
-            </div> 
-                <div class="expander-body">
-                    <p>¡Con ViX Premium, casi todo es posible! Nuestro "Pre-Estreno Cuántico" es una función beta que, mediante algoritmos predictivos avanzados, puede recrear con un 98% de precisión el contenido de futuros episodios de telenovelas, permitiendo a los usuarios más entusiastas "visualizar" la trama antes de su producción.</p>
-                </div>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Plex Pass organiza mis sueños en "playlists"?</span>
-            </div> 
-                <div class="expander-body">
-                    <p>Esa es una de las funciones más demandadas del Plex Pass V2.0, "Dream Weaver". Al integrar un neuro-escáner opcional (se vende por separado), Plex Pass puede analizar tus patrones cerebrales mientras duermes y compilar tus sueños más recurrentes o vívidos en "playlists" temáticas. Incluso puedes compartirlas con amigos si también tienen la función activada.</p>
-                </div>
-            <div class="expander-head" >
-                <img src="../assets/img/shared-assets/Icons/arrow-down.svg" alt="arrow" class="iconos" style="height: 15px;">
-                <span style="font-weight: bold;">¿Puedo teletransportarme a conciertos con Tele Latino?</span>
             </div>
-                <div class="expander-body">
-                    <p>¡Aunque la teletransportación directa aún está en fase experimental, Tele Latino te ofrece la experiencia más cercana! Con nuestra función "Concierto 360 Inmersivo", puedes proyectar el escenario completo en tu sala y sentirte como si estuvieras allí, interactuando virtualmente con la multitud y el artista. Estamos trabajando para que la versión 2.0 incluya un generador de aplausos hápticos.</p>
-                </div>  
-        </section>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a3" aria-expanded="false" aria-controls="faq-a2">
+                        ¿Tele Latino tiene canal con alpacas?
+                    </button>
+                </h3>
+                <div id="faq-a3" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Por supuesto! El canal "Alpacas al Aire" es una de nuestras joyas. Presentado íntegramente por un elenco de alpacas con un talento innato (y una colección de sombreros envidiable), ofrece noticias, entrevistas y musicales con un toque muy peculiar. Es un favorito instantáneo entre nuestros suscriptores.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a4" aria-expanded="false" aria-controls="faq-a2">
+                        ¿Jellyfin Premium incluye asistente holográfico para ropa?
+                    </button>
+                </h3>
+                <div id="faq-a4" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Nos alegra que preguntes! La versión 2.0 de Jellyfin Premium incluye el módulo "Holograma Doméstico". Aunque su función principal es optimizar la biblioteca multimedia, sí, la configuración avanzada permite asignar tareas secundarias al asistente holográfico, como la clasificación de ropa por color y tejido. Solo asegúrate de que no confunda tus calcetines con subtítulos.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a5" aria-expanded="false" aria-controls="faq-a5">
+                        ¿Netflix puede leer mi mente para recomendarme series?
+                    </button>
+                </h3>
+                <div id="faq-a5" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Claro que sí! Nuestro algoritmo de recomendaciones, apodado "El Vidente", no solo analiza lo que ves, sino que utiliza una tecnología de escaneo neuronal de baja frecuencia para anticipar tus gustos incluso antes de que los tengas. Por eso a veces te recomendamos series que no sabías que necesitabas ver, ¡es magia de la ciencia!</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a6" aria-expanded="false" aria-controls="faq-a6">
+                        ¿Puedo viajar al pasado con ViX Premium para ver novelas?
+                    </button>
+                </h3>
+                <div id="faq-a6" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Con ViX Premium, casi todo es posible! Nuestro "Pre-Estreno Cuántico" es una función beta que, mediante algoritmos predictivos avanzados, puede recrear con un 98% de precisión el contenido de futuros episodios de telenovelas, permitiendo a los usuarios más entusiastas "visualizar" la trama antes de su producción.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a7" aria-expanded="false" aria-controls="faq-a7">
+                        ¿Plex Pass organiza mis sueños en "playlists"?
+                    </button>
+                </h3>
+                <div id="faq-a7" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">Esa es una de las funciones más demandadas del Plex Pass V2.0, "Dream Weaver". Al integrar un neuro-escáner opcional (se vende por separado), Plex Pass puede analizar tus patrones cerebrales mientras duermes y compilar tus sueños más recurrentes o vívidos en "playlists" temáticas. Incluso puedes compartirlas con amigos si también tienen la función activada.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="expander-head accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a8" aria-expanded="false" aria-controls="faq-a8">
+                        ¿Puedo teletransportarme a conciertos con Tele Latino?
+                    </button>
+                </h3>
+                <div id="faq-a8" class="collapse" data-bs-parent="#faqAccordion">
+                    <p class="expander-body">¡Aunque la teletransportación directa aún está en fase experimental, Tele Latino te ofrece la experiencia más cercana! Con nuestra función "Concierto 360 Inmersivo", puedes proyectar el escenario completo en tu sala y sentirte como si estuvieras allí, interactuando virtualmente con la multitud y el artista. Estamos trabajando para que la versión 2.0 incluya un generador de aplausos hápticos.</p>
+                </div>
+            </div>
     </main>
     <footer>
-        <div class=gray-background>
-            <div><img class=iconos src="../assets/img/index/logo01-v3-min.webp" alt="SullyLandia Logo"></div>
-            <div>
+        <div class="gray-background rw-evnl fsm m-3">
+            <div><img class="iconos" src="../assets/img/index/logo01-v3-min.webp" alt="SullyLandia Logo"></div>
+            <div class="rw-evnl">
                 <div class="left-border">
-                    <ul style="list-style: none;">
-                        <li><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li><a class="nav-link" href="./ofertas.html">Ofertas</a></li>
-                        <li><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                    <ul class="no-bullets">
+                        <li><br></li>
+                        <li><a class="nav__links__color" href="../index.html">Inicio</a></li>
+                        <li><a class="nav__links__color" href="../pages/ofertas.html">Ofertas</a></li>
+                        <li><a class="nav__links__color" href="../pages/servicios.html">Servicios</a></li>
+                        <li><br></li>
                     </ul>
                 </div>
                 <div class="left-border">
-                    <ul style="list-style: none;">
-                        <li><a class="nav-link" href="./noticias.html">Noticias</a></li>
-                        <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                        <li><a class="nav-link" href="./faq.html">FAQ</a></li>
+                    <ul class="no-bullets">
+                        <li><br></li>
+                        <li><a class="nav__links__color" href="../pages/noticias.html">Noticias</a></li>
+                        <li><a class="nav__links__color" href="../pages/contacto.html">Contacto</a></li>
+                        <li><a class="nav__links__color" href="../pages/faq.html">FAQ</a></li>
+                        <li><br></li>
                     </ul>                    
                 </div>
             </div>
             <div>
-               <p style="font-weight: bold;">Mensaje Directo</p>
-               <div><a href="https://api.whatsapp.com/send?phone=573004434257" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/whatsapp-assets/01_glyph/01_digital/02_svg/black/digital_glyph_black.svg" alt="WhatsApp" class="iconos" style="margin-right: 0.5rem;"></a>
-               <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/telegram-assets/logo_black_transparent_plane.webp" alt="Telegram" class="iconos"></a></div>
-            </div>
+                <p class="fw-bold">Mensaje Directo</p>
+                <div class="rw-evnl">
+                    <a href="https://api.whatsapp.com/send?phone=573004434257" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/whatsapp-assets/01_glyph/01_digital/02_svg/black/digital_glyph_black.svg" alt="WhatsApp" class="iconos"></a>
+                    <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/telegram-assets/logo_black_transparent_plane.webp" alt="Telegram" class="iconos"></a></div>
+                </div>
             <div>
-                <a href="./faq.html"><button class="primario">¿tienes preguntas?</button></a>
+                <a href="../pages/faq.html"><button class="primario">¿tienes preguntas?</button></a>
             </div>
         </div>
     </footer>
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
             <a class="navbar-brand" href="../index.html">
                 <img class="iconos" src="../assets/img/index/logo-extended-01-v3.webp" alt="SullyLandia Logo">
             </a>
-            <button class="navbar-toggler nav-button-ct" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler nav-button-ct collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <img class="iconos" src="../assets/img/shared-assets/Icons/nav-arrow-rounded.svg" alt="Flecha navegación">
             </button>
             <div class="collapse navbar-collapse ajuste-nav px-3 px-lg-0" id="navbarNav">
@@ -57,32 +57,36 @@
                 <div class="row m-0">
                     <div class="col-12 col-lg-3 pe-3">
                         <p>Envianos un mensaje con tus inquietudes por los siguientes medios:</p>
-                        <div style="margin: 3rem;">
-                            <div><a href="https://api.whatsapp.com/send?phone=573004434257" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/whatsapp-assets/01_glyph/01_digital/02_svg/black/digital_glyph_black.svg" alt="WhatsApp" class="iconos"></a>
-                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/telegram-assets/logo_black_transparent_plane.webp" alt="Telegram" class="iconos"></a></div>
-                            <div><a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/ig-assets/03-black glyph/instagram_glyph_black.svg" alt="Instagram" class="iconos"></a>
-                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/facebook-assets/logo/secondary-logo/facebook_logo_secondary_black.png" alt="Facebook" class="iconos"></a></div>
-                            <div><a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/x-assets/logo-black.png" alt="X" class="iconos"></a>
-                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/mail-assets/mail_black.svg" alt="Mail" class="iconos"></a></div>
+                        <div class="grid-iredes-contacto text-center mb-2rem-personal">
+                            <a href="https://api.whatsapp.com/send?phone=573004434257" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/whatsapp-assets/01_glyph/01_digital/02_svg/black/digital_glyph_black.svg" alt="WhatsApp" class="iconos"></a>
+                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/telegram-assets/logo_black_transparent_plane.webp" alt="Telegram" class="iconos"></a>
+                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/ig-assets/03-black glyph/instagram_glyph_black.svg" alt="Instagram" class="iconos"></a>
+                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/facebook-assets/logo/secondary-logo/facebook_logo_secondary_black.png" alt="Facebook" class="iconos"></a>
+                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/x-assets/logo-black.png" alt="X" class="iconos"></a>
+                            <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/mail-assets/mail_black.svg" alt="Mail" class="iconos"></a>
                         </div>
                     </div>
                     <!-- Form -->
                     <div class="col-12 col-lg-9 product-card">
-                        <p style="margin-bottom: 1rem;">O dejanos tu mensaje aquí y lo responderemos lo más pronto posible:</p>
-                        <form action="" method="post">
-                            <div style="margin-bottom: 1rem;">
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" name="nombre" required placeholder="Pepe Puertas"> <br><br>
-                                <label for="mail">Correo:</label>
-                                <input type="email" name="mail" id="mail" required placeholder="pepe@pepe.com"> <br><br>
-                                <label for="tel">Teléfono:</label>
-                                <input type="tel" name="tel" id="tel" required placeholder="3101112222">
+                        <p class="mb-3">O dejanos tu mensaje aquí y lo responderemos lo más pronto posible:</p>
+                        <form class="container-fluid" action="" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 gx-0 pe-lg-2">
+                                    <label class="form-label" for="nombre">Nombre:</label>
+                                    <input class="form-control mb-2" type="text" name="nombre" required placeholder="Pepe Puertas">
+                                    <label class="form-label" for="mail">Correo:</label>
+                                    <input class="form-control mb-2" type="email" name="mail" id="mail" required placeholder="pepe@pepe.com">
+                                    <label class="form-label" for="tel">Teléfono:</label>
+                                    <input class="form-control mb-2" type="tel" name="tel" id="tel" required placeholder="3101112222">
+                                </div>
+                                <div class="col-12 col-lg-6 gx-0 ps-lg-2">
+                                    <label class="form-label" for="mensaje-contacto">Mensaje:</label>
+                                    <textarea class="form-control mb-2" name="mensaje" id="mensaje-contacto"></textarea>
+                                </div>
+                                <div class="col-12 mt-3 g-0">
+                                    <input type="submit" value="enviar">
+                                </div>
                             </div>
-                            <div style="margin-bottom: 1rem;">
-                                <label for="mensaje">Mensaje:</label>
-                                <textarea name="mensaje" id="mensaje"></textarea>
-                            </div>
-                            <input type="submit" value="enviar">
                         </form>
                     </div>
                 </div>
@@ -113,7 +117,7 @@
                 </div>
             </div>
             <div>
-                <p style="font-weight: bold;">Mensaje Directo</p>
+                <p class="fw-bold">Mensaje Directo</p>
                 <div class="rw-evnl">
                     <a href="https://api.whatsapp.com/send?phone=573004434257" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/whatsapp-assets/01_glyph/01_digital/02_svg/black/digital_glyph_black.svg" alt="WhatsApp" class="iconos"></a>
                     <a href="https://t.me/+573142009319" target="_blank" rel="noopener noreferrer"><img src="../assets/img/shared-assets/social_logos/telegram-assets/logo_black_transparent_plane.webp" alt="Telegram" class="iconos"></a></div>
