@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.ajuste-nav { flex-grow: 0; }
+nav ul li { margin-right: 1rem; }
+
+.nav__links__color {
+  color: $color-texto;
+  &:hover { color: $color-secundario; }
+}
+
+.pagina-actual-nav {
+  color: $color-principal;
+  font-weight: bold;
+  &:hover { color: $color-principal; }
+}
+
+.navegacion-sticky {
+  position: sticky; top: 1rem; z-index: 10;
+  // > .gray-background {
+  //   background: rgba($gris-100,.7);
+  //   box-shadow: $sombra-suave;
+  //   backdrop-filter: blur(7.2px);
+  //   -webkit-backdrop-filter: blur(7.2px);
+  // }
+}
+
+.nav-button-ct { @include btn-reset; padding: 0; }
+.navbar-toggler:focus { box-shadow: none; }
+
+.sec-nav { background-color: transparent; }
+.background-icon { opacity: .5; @include left-divider; }
+.current-selected-icon { @include left-divider; }

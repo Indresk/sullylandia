@@ -1,0 +1,29 @@
+@use "mixins" as *;
+
+img { width: 100%; height: auto; display: inline-block; object-fit: cover; }
+
+.iconos {
+  display: inline-block; height: 50px;
+  max-width: min-content; min-width: min-content;
+}
+
+a > img.iconos:hover {
+  @include transition(transform);
+  transform: scale(1.1);
+}
+
+.contenedor { position: relative; }
+div.contenedor { line-height: 0; }
+
+.sobre-imagen {
+  padding: 2rem;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  line-height: normal; overflow: hidden;
+  background: linear-gradient(180deg, rgba(0,0,0,.39) 0%, rgba(0,0,0,0) 70%);
+}
+
+.bajo-mh-overlay-sm {
+  line-height: normal; flex-wrap: wrap; gap: 2rem; text-align: center; padding: 2rem;
+  p { margin-bottom: 0; text-align: start; }
+}

@@ -1,0 +1,17 @@
+// Enfoque 1: index que re-exporta y carga CSS
+// Re-exportamos miembros (variables/mixins) para acceso global opcional
+@forward "variables";
+@forward "mixins";
+
+// Cargamos los módulos que generan CSS para que se emitan al usar este índice
+@use "base";
+@use "nav";
+@use "images";
+@use "buttons";
+@use "components";
+@use "flex-grid";
+@use "forms";
+@use "animations";
+@use "utilities";
+@use "responsive";
+ 

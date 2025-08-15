@@ -1,0 +1,18 @@
+// Utilidades de Flex y Grid
+.clm-btwn { display: flex; flex-direction: column; justify-content: space-between; }
+.rw-btwn { display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.rw-evnl { display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; flex-wrap: wrap; }
+.col-evnl { display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; }
+
+.grid-contenedor-noticias {
+  display: grid; grid-template-columns: repeat(3, minmax(30vh, 75vh));
+  place-content: start; overflow-x: auto; gap: 2rem; padding: 1rem 2rem; scrollbar-width: none;
+}
+
+.grid-contenedor-ofertas { display: grid; grid-template-columns: repeat(2, 1fr); padding: 0; }
+
+.ofertas-external-grid { display: grid; grid-template-columns: repeat(1, 100%); gap: 1rem; scrollbar-width: none; }
+
+.order-grid-item-reverse { order: -1; }
+
+.grid-iredes-contacto { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }

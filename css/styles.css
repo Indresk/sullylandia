@@ -1,793 +1,714 @@
-/* ____________________________________________________________________ */
-/* ______________________Ajustes INICIALES  ___________________________ */
-/* ____________________________________________________________________ */
-
-/* Declaración y uso de fuente */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
-body {
-    font-family: "Inter", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    /* background-image: url(../assets/img/index/background-temp.jpg);
-    background-size: cover;
-    background-repeat: repeat-y;*/
-} 
-
-/* Limpieza de paddings y margins - Reset CSS*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0px
-}
-
-:root {
-    --color_principal: #5718c4;
-}
-
-/* Tamaño de textos */
-
-h1,.main-headline {
-    font-size: 2.5em;
-    font-weight: 700;
-}
-
-h2{
-    font-size: 2em;
-    font-weight: 700;
-}
-
-h3{
-    font-size: 1.6em;
-    font-weight: 700;
-}
-
-p{
-    font-size: 1.2em;
-    font-weight: 400;
-}
-
-/* Ajuste para titulos secundarios */
-
-.titulo-secundario{
-    text-align: center;
-    margin: 4rem 0rem 4rem 0rem;
-}
-
-/* Fuentes de color blanco */
-
-.texto_invert{
-    color: white;
-}
-
-/* ____________________________________________________________________ */
-/* ______________________Ajustes de NAV     ___________________________ */
-/* ____________________________________________________________________ */
-
-/* Ajustar Nav links */
-
-.ajuste-nav{
-    flex-grow: 0;
-}
-
-nav ul li{
-    margin-right: 1rem;
-}
-
-.nav__links__color{
-    color: black;
-}
-
-.nav__links__color:hover{
-    color: var(--color_principal) !important;
-}
-
-.pagina-actual-nav{
-    color: var(--color_principal) !important;
-    font-weight: bold;
-}
-
-/* Sticky nav */
-
-.navegacion-sticky{
-    position: sticky;
-    top: 1rem;
-    z-index: 10;
-}
-
-.navegacion-sticky>.gray-background{
-    background: rgba(210, 210, 210, 0.7);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.2px);
-    -webkit-backdrop-filter: blur(7.2px);
-}
-
-/* control de botton para primary nav */
-
-.nav-button-ct{
-    border: none;
-    padding: 0;
-}
-
-.navbar-toggler:focus{
-    box-shadow: none;
-}
-
-/* Clases para secondary nav */
-
-.sec-nav{
-    background-color: transparent;
-}
-
-.background-icon{
-    opacity: 0.5;
-    padding-left: 1.5rem;
-    margin-right: 1.2rem;
-    border-left: 2px;
-    border-color: #1E1E1E;
-    border-style: solid;
-}
-
-.current-selected-icon{
-    padding-left: 1.5rem;
-    margin-right: 1.2rem;
-    border-left: 2px;
-    border-color: #1E1E1E;
-    border-style: solid;
-}
-
-.no-bullets{
-    list-style: none;
-}
-
-
-/* ____________________________________________________________________ */
-/* ______________________Ajustes de IMAGENES___________________________ */
-/* ____________________________________________________________________ */
-
-
-/* Ajuste general de imagenes */
-
-img{
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    object-fit: cover;
-}
-
-/* clase para assets de header, footer y logos */
-
-.iconos {
-    display: inline-block;
-    height: 50px;
-    max-width: min-content;
-    min-width: min-content;
-}
-
-a>img.iconos:hover{
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-}
-
-/* Fondo para contenido sobre imagen */
-
-.contenedor{
-    position: relative;
-}
-
-div.contenedor{
-    line-height: 0;
-}
-
-.sobre-imagen{
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    line-height: normal;
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-.bajo-mh-overlay-sm{
-    line-height: normal;
-    flex-wrap: wrap;
-    gap: 2rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.bajo-mh-overlay-sm p{
-    margin-bottom: 0px;
-    text-align: start;
-}
-
-/* ____________________________________________________________________ */
-/* ______________________Ajustes de BOTONES ___________________________ */
-/* ____________________________________________________________________ */
-
-button{
-    background-color: transparent;
-    border: none;
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.primario{
-    text-transform: uppercase;  
-    background-color: white;
-    border-radius: 10px;
-}
-
-.primario:hover{
-    transition: background-color 0.5s ease;
-    background-color: var(--color_principal);
-    color: white;
-}
-
-.secundario{
-    text-transform: uppercase;
-    background-color: white;
-    border-radius: 10px;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.secundario:hover{
-    transition: background-color 0.5s ease;
-    background-color: var(--color_principal);
-    color: white;
-}
-
-.text-link-prp{
-    text-align: left;
-    text-decoration: underline;
-    padding-left: 0;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-.text-link-prp:hover{
-    color: var(--color_principal);
-}
-
-.dot-prp{
-    border-radius: 100%;
-    background-color: #d9d9d9;
-    height: 43px;
-    width: 43px;
-    padding: 0;
-}
-
-.dot-prp:hover{
-    transition: background-color 0.5s ease;
-    background-color: rgba(171, 31, 255, 0.39);
-    transition: transform background-color 0.3s ease;
-    transform: scale(1.1);
-}
-
-.dot-prp:focus{
-    transition: background-color transform 0.5s ease;
-    background-color: var(--color_principal);
-    transform: scale(1.1)
-}
-
-.dot-prp:active{
-    transition: background-color 0.5s ease;
-    background-color: var(--color_principal);
-    transform: scale(1.1)
-}
-
-/* Clase para control de dots */
-
-.control-dot{
-    margin-top: 2rem;
-    text-align: center;
-    width: 100%;
-}
-
-/* Ajuste de botones de tab nav de servicios */
-
-#tabCategorias{
-    max-height: 888px;
-    border: none;
-    flex-wrap: nowrap;
-}
-
-#tabCategorias img{
-    max-width: 378px;
-}
-
-#tabCategorias>button{
-    border: none;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-}
-
-#tabCategorias>button.nav-link.active{
-    transition: background-color 1.0s ease;
-    background-color: var(--color_principal);
-    color: white;
-}
-
-
-/* ____________________________________________________________________ */
-/* ______________________Ajustes de COMPONENTES________________________ */
-/* ____________________________________________________________________ */
-
-/* Clase para cajas grises */
-
-.gray-background {
-    background-color: #e1e1e1;
-    padding: 1rem;
-    border-radius: 20px;
-    overflow: hidden;
-    align-items: stretch;
-}
-
-/* Clase para div con borde izquierdo y padding */
-
-.left-border{
-    border: 0;
-    border-left: 2px;
-    border-color: #1E1E1E;
-    border-style: solid;
-    padding-left: 1rem;
-    margin-right: 1rem;
-}
-
-.left-border ul{
-    margin-bottom: 0;
-    padding-left: 0;
-}
-
-/* espaciado para contenido de tarjetas */
-
-.card-personal{
-    padding: 1rem 0rem 1rem 0rem;
-    flex-basis: 100%;
-}
-
-.card-content{
-    padding: 1rem;
-}
-
-/* Estilo de secciones */
-
-section{
-    margin-bottom: 4rem;
-}
-
-/* margen de página */
-
-.page-margin{
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
-
-/* estilos para cards de offers */
-
-.offers-card{
-    padding: 1rem;
-    border-radius: 20px;
-    margin: 1rem;
-    overflow: hidden;
-
-}
-
-.separator-line{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    border-bottom: 2px;
-    border-color: #1E1E1E;
-    border-style: solid;
-}
-
-/* Clases para card de tipo de servicio */
-
-.product-card{
-    padding-left: 2rem; 
-    border-left: 2px; 
-    border-style: solid;
-    border-color: #1E1E1E;
-    max-height: 888px;
-    overflow: auto;
-}
-
-.product-card li{
-    padding-left: 2rem;
-    list-style-position: inside;
-}
-
-.tab-separator{
-    border: none;
-    background-color: #1E1E1E;
-    width: 100%;
-    height: 2px;
-    margin: 1rem 0rem;
-    flex-shrink: 0;
-}
-
-/* Estilo de expander para FAQ */
-
-.expander-head {
-    background-color: #c8c8c8;
-    border-radius: 20px;
-    margin-top: 1rem;
-}
-
-.expander-head button {
-    background-color: transparent;
-}
-
-.expander-body{
-    background-color: #e1e1e1;
-    padding: 1rem;
-    border-radius: 0 0 20px 20px;
-    overflow: hidden;
-    margin: 0rem 1.5rem;
-    text-align: center;
-}
-
-p.expander-body{
-    margin-bottom: 0px;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: var(--color_principal);
-    color: white;
-    border-radius: 20px;
-}
-
-.accordion-button:focus {
-    box-shadow: none;
-}
-
-
-/* ____________________________________________________________________ */
-/* ______________________Uso de FLEX y GRID    ________________________ */
-/* ____________________________________________________________________ */
-
-/* Uso general de flex */
-
-.clm-btwn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.rw-btwn{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.rw-evnl{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.col-evnl{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* Uso general de grids */
-
-.grid-contenedor-noticias{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(30vh,75vh));
-    place-content: start;
-    overflow-x: auto;
-    gap: 2rem;
-    padding: 1rem 2rem 1rem 2rem;
-    scrollbar-width: none;
-}
-
-.grid-contenedor-ofertas{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 0; 
-}
-
-.ofertas-external-grid{
-    display: grid;
-    grid-template-columns: repeat(1,100%);
-    gap: 1rem;
-    scrollbar-width: none;
-}
-
-.order-grid-item-reverse{
-    order: -1;
-}
-
-.grid-iredes-contacto{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
-}
-
-
-/* ____________________________________________________________________ */
-/* ______________________Ajuste de FORMS_______________________________ */
-/* ____________________________________________________________________ */
-
-
-select{
-    border-width: 0px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 100%;
-}
-
-select.form-select:focus{
-    border-color: var(--color_principal);
-    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
-}
-
-form label{
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-
-input#estrenos,#servicio-est {
-    border-width: 0px;
-    /* border-radius: 10px; */
-    width: 38px;
-    height: 38px;
-    margin-top: 0px;
-}
-
-input.form-check-input:focus{
-    border-color: var(--color_principal);
-    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
-}
-
-.form-check-input:checked{
-    background-color: var(--color_principal);
-    border-color: var(--color_principal);
-}
-
-textarea#mensaje-contacto {
-    height: 83%;
-}
-
-textarea#mensaje-contacto:focus {
-    border-color: var(--color_principal);
-    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
-}
-
-input.form-control:focus{
-    border-color: var(--color_principal);
-    box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
-}
-
-input[type=button], input[type=submit], input[type=reset] {
-    border: none;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    padding: 0.5rem 2rem;
-    text-transform: uppercase;  
-    background-color: white;
-    border-radius: 10px;
-    width: 100%;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-    transition: background-color 0.5s ease;
-    background-color: var(--color_principal);
-    color: white;
-}
-
-/* ____________________________________________________________________ */
-/* ______________________Seteo de ANIMACIONES__________________________ */
-/* ____________________________________________________________________ */
-
-
-/* transición de mh */
-
-.mh-scroll {
-    overflow-x: hidden;
+input[type=button],
+input[type=submit],
+input[type=reset], button {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5rem 2rem;
 }
 
 .mh-scroll-content {
-    display: grid;
-    grid-template-columns: repeat(2, 100%);
-    place-content: start;
-    animation: autoScroll 15s infinite;
-    animation-timing-function: ease;
+  display: grid;
+  grid-template-columns: repeat(2, 100%);
+  place-content: start;
+  animation: autoScroll 15s infinite;
+  animation-timing-function: ease;
 }
 
 @keyframes autoScroll {
-    0%, 45% { transform: translateX(0); }
-    55%, 95% { transform: translateX(-100%); }
+  0%, 45% {
+    transform: translateX(0);
+  }
+  55%, 95% {
+    transform: translateX(-100%);
+  }
+}
+.at-snp-srl {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-/* auto snap de scrollers */
-
-.at-snp-srl{
-    scroll-snap-type: x mandatory;
-    scroll-behavior:smooth;
+.at-snp-srl-obj {
+  scroll-snap-align: center;
 }
 
-.at-snp-srl-obj{
-    scroll-snap-align: center;
+.navbar-toggler {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
 }
 
-/* Animación de flecha primary nav mobile */
-
-.navbar-toggler{
-    transition: transform 0.3s ease;
-    transform: rotate(-90deg);
+button.navbar-toggler.collapsed {
+  transform: rotate(90deg);
 }
 
-button.navbar-toggler.collapsed{
-    transform: rotate(90deg);
+body {
+  background-color: black;
+  background-image: radial-gradient(transparent 0.6em, black 0.6em), conic-gradient(at 2em 2em, transparent 270deg, rgba(65, 0, 102, 0.467) 270deg), conic-gradient(at 2em 1em, transparent 270deg, rgba(43, 0, 68, 0.267) 270deg), conic-gradient(at 1em 2em, transparent 270deg, rgba(52, 0, 68, 0.333) 270deg), conic-gradient(at 2em 2em, transparent 270deg, rgba(57, 0, 68, 0.4) 270deg);
+  background-size: 2em 1em, 4em 4em, 1em 1em, 4em 4em, 4em 4em;
+  animation: bpx 12s infinite, bpy 12s -3.75s infinite;
+}
+@keyframes bpx {
+  0%, 7.5%, 100% {
+    background-position-x: 0, 0, 1em, 2em, 3em;
+  }
+  12.5%, 20% {
+    background-position-x: 0, 1em, 0, 3em, 2em;
+  }
+  25%, 32.5% {
+    background-position-x: 0, -1em, -2em, 5em, 4em;
+  }
+  37.5%, 45% {
+    background-position-x: 0, 1em, -4em, 7em, 2em;
+  }
+  50%, 57.5% {
+    background-position-x: 0, -2em, -5em, 8em, 5em;
+  }
+  62.5%, 70% {
+    background-position-x: 0, -3em, -4em, 7em, 6em;
+  }
+  75%, 82.5% {
+    background-position-x: 0, -1em, -2em, 5em, 4em;
+  }
+  87.5%, 95% {
+    background-position-x: 0, -3em, 0, 3em, 6em;
+  }
+}
+@keyframes bpy {
+  0%, 7.5%, 100% {
+    background-position-y: 0, 0, 1em, 2em, 3em;
+  }
+  12.5%, 20% {
+    background-position-y: 0, 1em, 0, 3em, 2em;
+  }
+  25%, 32.5% {
+    background-position-y: 0, -1em, -2em, 5em, 4em;
+  }
+  37.5%, 45% {
+    background-position-y: 0, 1em, -4em, 7em, 2em;
+  }
+  50%, 57.5% {
+    background-position-y: 0, -2em, -5em, 8em, 5em;
+  }
+  62.5%, 70% {
+    background-position-y: 0, -3em, -4em, 7em, 6em;
+  }
+  75%, 82.5% {
+    background-position-y: 0, -1em, -2em, 5em, 4em;
+  }
+  87.5%, 95% {
+    background-position-y: 0, -3em, 0, 3em, 6em;
+  }
 }
 
-
-/* ____________________________________________________________________ */
-/* ______________________Clases de UTILIDAD ___________________________ */
-/* ____________________________________________________________________ */
-
-
-/* Clase para ocultar en desktop */
-
-.hide-dkt{
-    display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
 }
 
-/* Margin de 2 rem personalizado */
-
-.mb-2rem-personal{
-    margin-bottom: 2rem;
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Clase para ocultar barra de desplazamiento */
-
-.hide-scrollbar{
-    scrollbar-width: none;
+h1, .main-headline {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ffffff;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #ffffff;
+}
 
-/* ____________________________________________________________________ */
-/* ______________________RESPONSIVE____________________________________ */
-/* ____________________________________________________________________ */
+h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #ffffff;
+}
 
+h4 {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+p, span, li {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.titulo-secundario {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.texto_invert {
+  color: #555555;
+}
+
+.ajuste-nav {
+  flex-grow: 0;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+.nav__links__color {
+  color: #ffffff;
+}
+.nav__links__color:hover {
+  color: #18c435;
+}
+
+.pagina-actual-nav {
+  color: #b51fff;
+  font-weight: bold;
+}
+.pagina-actual-nav:hover {
+  color: #b51fff;
+}
+
+.navegacion-sticky {
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+}
+
+.nav-button-ct {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.sec-nav {
+  background-color: transparent;
+}
+
+.background-icon {
+  opacity: 0.5;
+  padding-left: 1.5rem;
+  margin-right: 1.2rem;
+  border-left: 2px solid #ffffff;
+}
+
+.current-selected-icon {
+  padding-left: 1.5rem;
+  margin-right: 1.2rem;
+  border-left: 2px solid #ffffff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.iconos {
+  display: inline-block;
+  height: 50px;
+  max-width: min-content;
+  min-width: min-content;
+}
+
+a > img.iconos:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+}
+
+.contenedor {
+  position: relative;
+}
+
+div.contenedor {
+  line-height: 0;
+}
+
+.sobre-imagen {
+  padding: 2rem;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.bajo-mh-overlay-sm {
+  line-height: normal;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+.bajo-mh-overlay-sm p {
+  margin-bottom: 0;
+  text-align: start;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.primario, .secundario {
+  text-transform: uppercase;
+  background-color: #18c435;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.primario:hover, .secundario:hover {
+  transition: background-color 0.5s ease;
+  background-color: #b51fff;
+  color: #ff7979;
+}
+
+.text-link-prp {
+  color: #ffffff;
+  text-align: left;
+  text-decoration: underline;
+  padding-left: 0;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.text-link-prp:hover {
+  color: #b51fff;
+}
+
+.dot-prp {
+  border-radius: 100%;
+  background-color: #18c435;
+  height: 43px;
+  width: 43px;
+  padding: 0;
+}
+.dot-prp:hover {
+  transition: background-color 0.5s ease;
+  background-color: #b51fff;
+  transform: scale(1.1);
+}
+.dot-prp:focus {
+  transition: background-color 0.5s ease;
+  background-color: #b51fff;
+  transform: scale(1.1);
+}
+.dot-prp:active {
+  transition: background-color 0.5s ease;
+  background-color: #b51fff;
+  transform: scale(1.1);
+}
+
+.control-dot {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+#tabCategorias {
+  max-height: 888px;
+  border: none;
+  flex-wrap: nowrap;
+}
+#tabCategorias img {
+  max-width: 378px;
+}
+#tabCategorias p {
+  color: #ffffff;
+}
+#tabCategorias > button {
+  border: none;
+  border-radius: 10px;
+}
+#tabCategorias > button:hover {
+  transition: background-color 0.5s ease;
+  background-color: #18c435;
+  transform: scale(0.95);
+}
+#tabCategorias > button:hover p {
+  color: #ff7979;
+}
+#tabCategorias > button.nav-link.active {
+  transition: background-color 1s ease;
+  background-color: #b51fff;
+}
+#tabCategorias > button.nav-link.active p {
+  color: #ff7979;
+}
+
+.gray-background {
+  padding: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  align-items: stretch;
+  background: rgba(91, 48, 141, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+}
+
+.left-border {
+  border: 0;
+  border-left: 2px solid #18c435;
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+.left-border ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.card-personal {
+  padding: 1rem 0;
+  flex-basis: 100%;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+.page-margin {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.offers-card {
+  padding: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.separator-line {
+  margin: 1rem 3rem;
+  border-bottom: 2px solid #18c435;
+}
+
+.tab-separator {
+  border: none;
+  background-color: #18c435;
+  width: 100%;
+  height: 2px;
+  margin: 1rem 0;
+  flex-shrink: 0;
+}
+
+.product-card {
+  border-radius: 0;
+  padding-left: 2rem;
+  border-left: 2px solid #18c435;
+  max-height: 888px;
+  overflow: auto;
+}
+.product-card li {
+  padding-left: 2rem;
+  list-style-position: inside;
+}
+
+.expander-head {
+  background-color: #5b308d;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+.expander-head button {
+  background-color: transparent;
+}
+
+.expander-body {
+  background-color: #525252;
+  padding: 1rem;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  margin: 0 1.5rem;
+  text-align: center;
+}
+
+p.expander-body {
+  margin-bottom: 0;
+}
+
+.accordion-button {
+  color: #ffffff;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #b51fff;
+  color: #ff7979;
+  border-radius: 20px;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:hover {
+  color: #ff7979;
+}
+
+.clm-btwn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rw-btwn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rw-evnl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col-evnl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.grid-contenedor-noticias {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30vh, 75vh));
+  place-content: start;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  scrollbar-width: none;
+}
+
+.grid-contenedor-ofertas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+}
+
+.ofertas-external-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  gap: 1rem;
+  scrollbar-width: none;
+}
+
+.order-grid-item-reverse {
+  order: -1;
+}
+
+.grid-iredes-contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+select {
+  border-width: 0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100%;
+}
+select.form-select:focus {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+select:hover {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+input#estrenos,
+#servicio-est {
+  border-width: 0;
+  width: 38px;
+  height: 38px;
+  margin-top: 0;
+}
+input#estrenos:hover,
+#servicio-est:hover {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+input.form-check-input:focus {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+input.form-check-input:hover {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+input.form-check-input:checked {
+  background-color: #b51fff;
+  border-color: #b51fff;
+}
+
+.form-check-input:checked {
+  background-color: #b51fff;
+  border-color: #b51fff;
+}
+
+textarea#mensaje-contacto {
+  height: 83%;
+}
+textarea#mensaje-contacto:focus {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+textarea#mensaje-contacto:hover {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+input.form-control:focus {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+input.form-control:hover {
+  border-color: #b51fff;
+  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  border: none;
+  text-transform: uppercase;
+  background-color: #18c435;
+  border-radius: 10px;
+  width: 100%;
+}
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  transition: background-color 0.5s ease;
+  background-color: #b51fff;
+  color: #18c435;
+}
+
+.hide-dkt {
+  display: none;
+}
+
+.mb-2rem-personal {
+  margin-bottom: 2rem;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-bullets {
+  list-style: none;
+}
 
 @media (max-width: 991px) {
-    h1,.main-headline {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    h3 {
-        font-size: 1.3em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-    
-    .page-margin{
-        margin: 0rem 1rem 0rem 1rem;
-    }
-
-    .order-grid-item-reverse{
-        order: 1;
-    }
-
-    .ofertas-external-grid{
-        grid-template-columns: repeat(2,100%);
-        place-content: start;
-        overflow-x: scroll;
-    }
-
-    .grid-contenedor-ofertas{
-        grid-template-columns: repeat(1,1fr);
-        margin-bottom: 0rem;
-    }
-
-    .hide-small{
-        display: none;
-    }
-
-    .show-small{
-        display: inline-block;
-    }
-
-    .fsm{
-        flex-direction: column;
-        row-gap: 1rem;
-    }
-
-    .width-fixed-button-sm{
-        width: 100%;
-    }
-
-    /* ajustes responsive para pagina de servicios */
-
-    .product-card{
-        padding-top: 2rem;
-        padding: 2rem 1rem 0rem 1rem;
-        border-left: none;
-        border-top: 2px solid #1E1E1E;
-    }
-    .tab-separator{
-        width: 2px;
-        height: 100%;
-        margin: 0rem 1rem;
-    }
-    
-    #tabCategorias img{
-        max-width: 150px;
-    }
-
-    #tabCategorias button{
-        width: 100%;
-    }
-
-    /* ajuste de fondo mobile de noticias y ofertas */
-
-    #fondo-offers-news{
-        padding: 0px;
-        margin: 0px;
-        background-color: transparent;
-    }
-
-    #fondo-offers-news>.offers-card{
-        margin: 0rem 0rem 2rem 0rem;
-        background-color: #e1e1e1;
-    }
-
-    #fondo-offers-news>.offers-card:last-child{
-        margin: 0px;
-    }
-
-    /* Ajuste textarea para contacto en mobile */
-
-    textarea#mensaje-contacto {
+  h1, .main-headline {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  p, span, li {
+    font-size: 1em;
+  }
+  .page-margin {
+    margin: 0 1rem;
+  }
+  .order-grid-item-reverse {
+    order: 1;
+  }
+  .ofertas-external-grid {
+    grid-template-columns: repeat(2, 100%);
+    place-content: start;
+    overflow-x: scroll;
+  }
+  .grid-contenedor-ofertas {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 0;
+  }
+  .hide-small {
+    display: none;
+  }
+  .show-small {
+    display: inline-block;
+  }
+  .fsm {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .width-fixed-button-sm {
+    width: 100%;
+  }
+  .product-card {
+    padding-top: 2rem;
+    padding: 2rem 1rem 1rem 1rem;
+    border-left: none;
+    border-top: 2px solid #18c435;
+  }
+  .tab-separator {
+    width: 2px;
+    height: 100%;
+    margin: 0 1rem;
+  }
+  #tabCategorias img {
+    max-width: 150px;
+  }
+  #tabCategorias button {
+    width: 100%;
+  }
+  #fondo-offers-news {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  #fondo-offers-news > .offers-card {
+    margin: 0 0 2rem 0;
+    background-color: #5b308d;
+  }
+  #fondo-offers-news > .offers-card:last-child {
+    margin: 0;
+  }
+  textarea#mensaje-contacto {
     height: auto;
-    }
-
-    /* Retirar hover en icono de primary para mobile */
-
-    a.navbar-brand>img.iconos:hover{
-        transform: none;
-    }
+  }
+  a.navbar-brand > img.iconos:hover {
+    transform: none;
+  }
 }
-
-/* Ajuste de scroll bar en desktop */
-
 @media (pointer: fine) {
-    .grid-contenedor-noticias{
-        scrollbar-width:thin;
-    }
+  .grid-contenedor-noticias {
+    scrollbar-width: thin;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */

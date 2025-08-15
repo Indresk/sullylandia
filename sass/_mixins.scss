@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+// Mixins y placeholders
+@mixin transition($props, $time: .5s, $ease: ease) {
+  transition: #{$props} #{$time} #{$ease};
+}
+
+@mixin focus-ring($color: $focus-glow) {
+  box-shadow: 0 0 0 .25rem $color;
+}
+
+@mixin btn-reset {
+  background-color: transparent;
+  border: none;
+}
+
+@mixin left-divider {
+  padding-left: 1.5rem;
+  margin-right: 1.2rem;
+  border-left: 2px solid $color-texto;
+}
+
+@mixin card-base {
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+// Placeholder compartido
+%btn-shared {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  padding: .5rem 2rem;
+}
