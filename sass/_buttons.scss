@@ -4,65 +4,85 @@
 button { @include btn-reset; @extend %btn-shared; }
 
 .primario {
-  text-transform: uppercase;
-  background-color: $color-secundario;
-  border-radius: $radius-sm;
-  color: $color-texto;
-  &:hover { @include transition(background-color); background-color: $color-principal; color: $color-texto-secundario; }
+    text-transform: uppercase;
+    background-color: $color-secundario;
+    border-radius: $radius-sm;
+    color: $color-texto;
+    overflow: hidden;
+    &:hover { 
+        @include transition(background-color); 
+        background-color: $color-principal; 
+        color: $color-texto-secundario; 
+    }
 }
 
 .secundario {
-  @extend .primario;
+    @extend .primario;
 }
 
 .text-link-prp {
-  color: $color-texto;
-  text-align: left; 
-  text-decoration: underline; 
-  padding-left: 0;
-  text-decoration-thickness: 2px; 
-  text-underline-offset: 3px;
-  &:hover { color: $color-principal; }
+    color: $color-texto;
+    text-align: left; 
+    text-decoration: underline; 
+    padding-left: 0;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 3px;
+    &:hover { color: $color-principal; }
 }
 
 .dot-prp {
-  border-radius: 100%; 
-  background-color: $color-secundario;
-  height: 43px; width: 43px; padding: 0;
-  &:hover { @include transition(background-color); background-color: $color-principal; transform: scale(1.1); }
-  &:focus { @include transition(background-color); background-color: $color-principal; transform: scale(1.1); }
-  &:active { @include transition(background-color); background-color: $color-principal; transform: scale(1.1); }
-}
-
-.control-dot { 
-  margin-top: 2rem; 
-  text-align: center; 
-  width: 100%; 
-}
-
-#tabCategorias {
-  max-height: 888px; 
-  border: none; 
-  flex-wrap: nowrap;
-  img { max-width: 378px; }
-  p {color: $color-texto;}
-  > button {
-    border: none; 
-    border-radius: $radius-sm; 
+    border-radius: 100%; 
+    background-color: $color-secundario;
+    height: 43px; width: 43px; padding: 0;
+    
     &:hover { 
-      @include transition(background-color); 
-      background-color: $color-secundario; 
-      transform: scale(0.95);
-      p{
-        color: $color-texto-secundario;
-      }
+        @include transition(background-color); 
+        background-color: $color-principal; 
+        transform: scale(1.1); 
     }
-    &.nav-link.active { 
-      @include transition(background-color,1s); 
-      background-color: $color-principal; 
-      p{
-        color: $color-texto-secundario;
-      }
+    
+    &:focus { 
+        @include transition(background-color); 
+        background-color: $color-principal; 
+        transform: scale(1.1); 
     }
-  }
-}
+    
+    &:active { 
+        @include transition(background-color); 
+        background-color: $color-principal; 
+        transform: scale(1.1); }
+    }
+    
+    .control-dot { 
+        margin-top: 2rem; 
+        text-align: center; 
+        width: 100%; 
+    }
+    
+    #tabCategorias {
+        max-height: 888px; 
+        border: none; 
+        flex-wrap: nowrap;
+        img { max-width: 378px; }
+        p {color: $color-texto;}
+        > button {
+            border: none; 
+            border-radius: $radius-sm; 
+            &:hover { 
+                @include transition(background-color); 
+                background-color: $color-secundario; 
+                transform: scale(0.95);
+                p{
+                    color: $color-texto-secundario;
+                }
+            }
+            &.nav-link.active { 
+                @include transition(background-color,1s); 
+                background-color: $color-principal; 
+                p{
+                    color: $color-texto-secundario;
+                }
+            }
+        }
+    }
+    

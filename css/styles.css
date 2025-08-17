@@ -1,6 +1,4 @@
-input[type=button],
-input[type=submit],
-input[type=reset], button {
+input[type=button], input[type=submit], input[type=reset], button {
   font-weight: 600;
   font-size: 18px;
   text-align: center;
@@ -191,21 +189,15 @@ nav ul li {
   box-shadow: none;
 }
 
-.sec-nav {
-  background-color: transparent;
-}
-
 .background-icon {
-  opacity: 0.5;
-  padding-left: 1.5rem;
-  margin-right: 1.2rem;
-  border-left: 2px solid #ffffff;
+  opacity: 0.3;
+  padding: 0rem 1.5rem;
+  border-inline: 1px solid #18c435;
 }
 
 .current-selected-icon {
-  padding-left: 1.5rem;
-  margin-right: 1.2rem;
-  border-left: 2px solid #ffffff;
+  padding: 0rem 1.5rem;
+  border-inline: 1px solid #18c435;
 }
 
 img {
@@ -243,7 +235,7 @@ div.contenedor {
   height: 100%;
   line-height: normal;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.719) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .bajo-mh-overlay-sm {
@@ -263,16 +255,17 @@ button {
   border: none;
 }
 
-.primario, .secundario {
+.primario, input[type=button], input[type=submit], input[type=reset], .secundario {
   text-transform: uppercase;
   background-color: #18c435;
   border-radius: 10px;
   color: #ffffff;
+  overflow: hidden;
 }
-.primario:hover, .secundario:hover {
+.primario:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, .secundario:hover {
   transition: background-color 0.5s ease;
   background-color: #b51fff;
-  color: #ff7979;
+  color: #2b002c;
 }
 
 .text-link-prp {
@@ -337,20 +330,20 @@ button {
   transform: scale(0.95);
 }
 #tabCategorias > button:hover p {
-  color: #ff7979;
+  color: #2b002c;
 }
 #tabCategorias > button.nav-link.active {
   transition: background-color 1s ease;
   background-color: #b51fff;
 }
 #tabCategorias > button.nav-link.active p {
-  color: #ff7979;
+  color: #2b002c;
 }
 
 .gray-background {
-  padding: 1rem;
   border-radius: 20px;
   overflow: hidden;
+  padding: 1rem;
   align-items: stretch;
   background: rgba(91, 48, 141, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -430,10 +423,15 @@ section {
 }
 
 .expander-body {
-  background-color: #525252;
-  padding: 1rem;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px;
   overflow: hidden;
+  padding: 1rem;
+  align-items: stretch;
+  background: rgba(91, 48, 141, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.2px);
+  -webkit-backdrop-filter: blur(7.2px);
+  border-radius: 0 0 20px 20px;
   margin: 0 1.5rem;
   text-align: center;
 }
@@ -446,15 +444,28 @@ p.expander-body {
   color: #ffffff;
 }
 .accordion-button:not(.collapsed) {
+  box-shadow: none;
   background-color: #b51fff;
-  color: #ff7979;
+  color: #2b002c;
   border-radius: 20px;
 }
 .accordion-button:focus {
   box-shadow: none;
 }
 .accordion-button:hover {
-  color: #ff7979;
+  color: #2b002c;
+}
+
+.rw-btwn, .rw-evnl, .col-evnl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rw-evnl, .col-evnl {
+  justify-content: space-evenly;
 }
 
 .clm-btwn {
@@ -463,27 +474,8 @@ p.expander-body {
   justify-content: space-between;
 }
 
-.rw-btwn {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.rw-evnl {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .col-evnl {
-  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .grid-contenedor-noticias {
@@ -540,15 +532,13 @@ form label {
   color: #ffffff;
 }
 
-input#estrenos,
-#servicio-est {
+input #estrenos, #servicio-est {
   border-width: 0;
   width: 38px;
   height: 38px;
   margin-top: 0;
 }
-input#estrenos:hover,
-#servicio-est:hover {
+input #estrenos:hover, #servicio-est:hover {
   border-color: #b51fff;
   box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
 }
@@ -592,21 +582,8 @@ input.form-control:hover {
   box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
 }
 
-input[type=button],
-input[type=submit],
-input[type=reset] {
-  border: none;
-  text-transform: uppercase;
-  background-color: #18c435;
-  border-radius: 10px;
+input[type=button], input[type=submit], input[type=reset] {
   width: 100%;
-}
-input[type=button]:hover,
-input[type=submit]:hover,
-input[type=reset]:hover {
-  transition: background-color 0.5s ease;
-  background-color: #b51fff;
-  color: #18c435;
 }
 
 .hide-dkt {
@@ -670,7 +647,6 @@ input[type=reset]:hover {
     width: 100%;
   }
   .product-card {
-    padding-top: 2rem;
     padding: 2rem 1rem 1rem 1rem;
     border-left: none;
     border-top: 2px solid #18c435;
@@ -692,8 +668,15 @@ input[type=reset]:hover {
     background-color: transparent;
   }
   #fondo-offers-news > .offers-card {
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 1rem;
+    align-items: stretch;
+    background: rgba(91, 48, 141, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
     margin: 0 0 2rem 0;
-    background-color: #5b308d;
   }
   #fondo-offers-news > .offers-card:last-child {
     margin: 0;

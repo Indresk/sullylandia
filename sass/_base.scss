@@ -2,18 +2,16 @@
 @use "animations" as *;
 
 * {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  border: 0;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    border: 0;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  // background: linear-gradient(180deg,rgba(0, 0, 0, 1) 50%, rgb(29, 0, 36) 100%);
-  // background-attachment: fixed;
-  @extend %fondo-animado;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    @extend %fondo-animado;
 }
 
 h1, .main-headline { font-size: 2.5em; font-weight: 700; color: $color-texto;}
@@ -23,10 +21,10 @@ h4 { font-size: 1.4em; font-weight: 700; color: $color-texto;}
 p, span, li  { font-size: 1.2em; font-weight: 400; color: $color-texto;}
 
 .titulo-secundario { 
-  text-align: center; 
-  margin: 4rem 0; 
+    text-align: center; 
+    margin: 4rem 0; 
 }
 
 .texto_invert { 
-  color: $color-texto-invert; 
+    color: $color-texto-invert; 
 }

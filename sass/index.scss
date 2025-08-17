@@ -1,9 +1,10 @@
-// Enfoque 1: index que re-exporta y carga CSS
-// Re-exportamos miembros (variables/mixins) para acceso global opcional
+// Archivo de union de partials
+
+// Llamado de viriables y mixins
 @forward "variables";
 @forward "mixins";
 
-// Cargamos los módulos que generan CSS para que se emitan al usar este índice
+// Partials
 @use "base";
 @use "nav";
 @use "images";

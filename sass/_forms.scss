@@ -1,46 +1,84 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "buttons" as *;
 
 select {
-  border-width: 0; padding: .5rem; border-radius: $radius-sm; width: 100%;
-  &.form-select:focus { border-color: $color-principal; @include focus-ring(); }
-  &:hover { border-color: $color-principal; @include focus-ring(); }
+    border-width: 0; 
+    padding: .5rem; 
+    border-radius: $radius-sm; 
+    width: 100%;
+    &.form-select:focus { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
+    &:hover { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
 }
 
 form label { 
-  font-weight: bold; 
-  margin-bottom: 0; 
-  color: $color-texto;
+    font-weight: bold; 
+    margin-bottom: 0; 
+    color: $color-texto;
 }
 
-input#estrenos,
-#servicio-est {
-  border-width: 0; width: 38px; height: 38px; margin-top: 0;
-  &:hover { border-color: $color-principal; @include focus-ring(); }
+input #estrenos, #servicio-est {
+    border-width: 0; 
+    width: 38px; 
+    height: 38px; 
+    margin-top: 0;
+    &:hover { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
 }
 
 input.form-check-input { 
-  &:focus { border-color: $color-principal; @include focus-ring(); }
-  &:hover { border-color: $color-principal; @include focus-ring(); }
-  &:checked { background-color: $color-principal; border-color: $color-principal;}
+    &:focus { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
+    &:hover { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
+    &:checked { 
+        background-color: $color-principal; 
+        border-color: $color-principal;
+    }
 }
-.form-check-input:checked { background-color: $color-principal; border-color: $color-principal; }
+
+.form-check-input:checked { 
+    background-color: $color-principal; 
+    border-color: $color-principal; 
+}
 
 textarea#mensaje-contacto { 
-  height: 83%; 
-  &:focus { border-color: $color-principal; @include focus-ring(); }
-  &:hover { border-color: $color-principal; @include focus-ring(); }
+    height: 83%; 
+    &:focus { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
+    &:hover { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
 }
 
 input.form-control{
-  &:focus { border-color: $color-principal; @include focus-ring(); }
-  &:hover { border-color: $color-principal; @include focus-ring(); }
+    &:focus { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
+    &:hover { 
+        border-color: $color-principal; 
+        @include focus-ring(); 
+    }
 }
 
-input[type=button],
-input[type=submit],
-input[type=reset] {
-  @extend %btn-shared;
-  border: none; text-transform: uppercase; background-color: $color-secundario; border-radius: $radius-sm; width: 100%;
-  &:hover { @include transition(background-color); background-color: $color-principal; color: $color-secundario; }
+input[type=button], input[type=submit], input[type=reset] {
+    @extend %btn-shared;
+    @extend .primario;
+    width: 100%;
 }

@@ -2,101 +2,99 @@
 @use "mixins" as *;
 
 .gray-background {
-  padding: 1rem; @include card-base; 
-  align-items: stretch; 
-  background: rgba($gris-200,.3);
-  box-shadow: $sombra-suave;
-  backdrop-filter: blur(7.2px);
-  -webkit-backdrop-filter: blur(7.2px);
+    @include card-base; 
 }
 
 .left-border {
-  border: 0; 
-  border-left: 2px solid $color-bordes;
-  padding-left: 1rem; 
-  margin-right: 1rem;
-  ul { 
-    margin-bottom: 0; 
-    padding-left: 0; 
-  }
+    border: 0; 
+    border-left: 2px solid $color-bordes;
+    padding-left: 1rem; 
+    margin-right: 1rem;
+    ul { 
+        margin-bottom: 0; 
+        padding-left: 0; 
+    }
 }
 
 .card-personal { 
-  padding: 1rem 0; 
-  flex-basis: 100%; 
+    padding: 1rem 0; 
+    flex-basis: 100%; 
 }
 
 .card-content { 
-  padding: 1rem; 
+    padding: 1rem; 
 }
 
 section { 
-  margin-bottom: 4rem; 
+    margin-bottom: 4rem; 
 }
 
 .page-margin { 
-  margin-left: 4rem; margin-right: 4rem; 
+    margin-left: 4rem; margin-right: 4rem; 
 }
 
 .offers-card { 
-  padding: 1rem; 
-  @include card-base; 
-  margin: 1rem; 
+    padding: 1rem;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    margin: 1rem; 
 }
 
 .separator-line { 
-  margin: 1rem 3rem; 
-  border-bottom: 2px solid $color-bordes; 
+    margin: 1rem 3rem; 
+    border-bottom: 2px solid $color-bordes; 
 }
 
 .tab-separator {
-  border: none; background-color: $color-bordes; 
-  width: 100%; 
-  height: 2px; 
-  margin: 1rem 0; 
-  flex-shrink: 0;
+    border: none; background-color: $color-bordes; 
+    width: 100%; 
+    height: 2px; 
+    margin: 1rem 0; 
+    flex-shrink: 0;
 }
 
 .product-card {
-  border-radius: 0;
-  padding-left: 2rem; 
-  border-left: 2px solid $color-bordes;
-  max-height: 888px; 
-  overflow: auto;
-  li { padding-left: 2rem; 
-    list-style-position: inside; 
-  }
+    border-radius: 0;
+    padding-left: 2rem; 
+    border-left: 2px solid $color-bordes;
+    max-height: 888px; 
+    overflow: auto;
+    li { padding-left: 2rem; 
+        list-style-position: inside; 
+    }
 }
 
 .expander-head {
-  background-color: $gris-200; 
-  border-radius: $radius-lg; margin-top: 1rem;
-  button { 
-    background-color: transparent; 
-  }
+    background-color: $gris-200; 
+    border-radius: $radius-lg; margin-top: 1rem;
+    button { 
+        background-color: transparent; 
+    }
 }
 
 .expander-body {
-  background-color: $gris-100; 
-  padding: 1rem; 
-  border-radius: 0 0 $radius-lg $radius-lg;
-  overflow: hidden; 
-  margin: 0 1.5rem; 
-  text-align: center;
+    @include card-base;
+    border-radius: 0 0 $radius-lg $radius-lg;
+    margin: 0 1.5rem; 
+    text-align: center;
 }
 
 p.expander-body { 
-  margin-bottom: 0; 
+    margin-bottom: 0; 
 }
 
 .accordion-button {
-  color: $color-texto;
-  &:not(.collapsed) { 
-    background-color: $color-principal; 
-    color: $color-texto-secundario; 
-    border-radius: $radius-lg; }
-  &:focus { box-shadow: none; }
-  &:hover {
-    color: $color-texto-secundario;
-  }
-}
+    color: $color-texto;
+    &:not(.collapsed) { 
+        box-shadow: none;
+        background-color: $color-principal;
+        color: $color-texto-secundario; 
+        border-radius: $radius-lg;
+        } 
+    &:focus { 
+        box-shadow: none; 
+    }
+    &:hover {
+        color: $color-texto-secundario;
+    }
+}    

@@ -1,57 +1,89 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 @media (max-width: 991px) {
-  h1, .main-headline { font-size: 2em; }
-  h2 { font-size: 1.6em; }
-  h3 { font-size: 1.3em; }
-  h4 { font-size: 1.2em; }
-  p, span, li { font-size: 1em; }
-
-  .page-margin { margin: 0 1rem; }
-
-  .order-grid-item-reverse { order: 1; }
-
-  .ofertas-external-grid { grid-template-columns: repeat(2, 100%); place-content: start; overflow-x: scroll; }
-
-  .grid-contenedor-ofertas { grid-template-columns: repeat(1, 1fr); margin-bottom: 0; }
-
-  .hide-small { display: none; }
-  .show-small { display: inline-block; }
-
-  .fsm { flex-direction: column; row-gap: 1rem; }
-  .width-fixed-button-sm { width: 100%; }
-
-  // ajustes responsive para pagina de servicios
-  .product-card {
-    padding-top: 2rem; padding: 2rem 1rem 1rem 1rem;
-    border-left: none; border-top: 2px solid $color-bordes;
-  }
-
-  .tab-separator { width: 2px; height: 100%; margin: 0 1rem; }
-
-  #tabCategorias {
-    img { max-width: 150px; }
-    button { width: 100%; }
-  }
-
-  // ajuste de fondo mobile de noticias y ofertas
-  #fondo-offers-news {
-    padding: 0; margin: 0; background-color: transparent;
-
-    > .offers-card {
-      margin: 0 0 2rem 0; background-color: $gris-200;
-
-      &:last-child { margin: 0; }
+    h1, .main-headline { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.2em; }
+    p, span, li { font-size: 1em;}
+    
+    .page-margin { 
+        margin: 0 1rem; 
     }
-  }
-
-  // textarea en mobile
-  textarea#mensaje-contacto { height: auto; }
-
-  // retirar hover en icono de primary para mobile
-  a.navbar-brand > img.iconos:hover { transform: none; }
+    
+    .order-grid-item-reverse { 
+        order: 1; 
+    }
+    
+    .ofertas-external-grid { 
+        grid-template-columns: repeat(2, 100%); 
+        place-content: start; 
+        overflow-x: scroll; 
+    }
+    
+    .grid-contenedor-ofertas { 
+        grid-template-columns: repeat(1, 1fr); 
+        margin-bottom: 0; 
+    }
+    
+    .hide-small { 
+        display: none; 
+    }
+    
+    .show-small { 
+        display: inline-block; 
+    }
+    
+    .fsm { 
+        flex-direction: column; 
+        row-gap: 1rem; 
+    }
+    .width-fixed-button-sm { 
+        width: 100%; 
+    }
+    
+    // ajustes responsive para pagina de servicios
+    .product-card {
+        padding: 2rem 1rem 1rem 1rem;
+        border-left: none; 
+        border-top: 2px solid $color-bordes;
+    }
+    
+    .tab-separator { 
+        width: 2px; 
+        height: 100%; 
+        margin: 0 1rem; 
+    }
+    
+    #tabCategorias {
+        img { max-width: 150px; }
+        button { width: 100%; }
+    }
+    
+    // ajuste de fondo mobile de noticias y ofertas
+    #fondo-offers-news {
+        padding: 0; margin: 0; background-color: transparent;
+        > .offers-card {
+            @include card-base;
+            margin: 0 0 2rem 0;
+            &:last-child { margin: 0; }
+        }
+    }
+    
+    // textarea en mobile
+    textarea#mensaje-contacto { 
+        height: auto; 
+    }
+    
+    // retirar hover en icono de primary para mobile
+    a.navbar-brand > img.iconos:hover { 
+        transform: none; 
+    }
 }
 
 @media (pointer: fine) {
-  .grid-contenedor-noticias { scrollbar-width: thin; }
+    .grid-contenedor-noticias { 
+        scrollbar-width: thin; 
+    }
 }
