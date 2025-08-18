@@ -5,13 +5,15 @@ button { @include btn-reset; @extend %btn-shared; }
 
 .primario {
     text-transform: uppercase;
-    background-color: $color-secundario;
+    background-color: rgba($color-secundario,.8);
+    box-shadow: rgba($color-secundario,.2) 0rem 1.5rem 10px -15px;
     border-radius: $radius-sm;
     color: $color-texto;
     overflow: hidden;
     &:hover { 
         @include transition(background-color); 
-        background-color: $color-principal; 
+        background-color: rgba($color-principal,.8);
+        box-shadow: rgba($color-principal,.2) 0rem 1.5rem 10px -15px;
         color: $color-texto-secundario; 
     }
 }

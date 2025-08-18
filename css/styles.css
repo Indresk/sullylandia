@@ -257,15 +257,17 @@ button {
 
 .primario, input[type=button], input[type=submit], input[type=reset], .secundario {
   text-transform: uppercase;
-  background-color: #18c435;
+  background-color: rgba(24, 196, 53, 0.8);
+  box-shadow: rgba(24, 196, 53, 0.2) 0rem 1.5rem 10px -15px;
   border-radius: 10px;
   color: #ffffff;
   overflow: hidden;
 }
 .primario:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, .secundario:hover {
   transition: background-color 0.5s ease;
-  background-color: #b51fff;
-  color: #2b002c;
+  background-color: rgba(181, 31, 255, 0.8);
+  box-shadow: rgba(181, 31, 255, 0.2) 0rem 1.5rem 10px -15px;
+  color: #00ee00;
 }
 
 .text-link-prp {
@@ -330,14 +332,14 @@ button {
   transform: scale(0.95);
 }
 #tabCategorias > button:hover p {
-  color: #2b002c;
+  color: #00ee00;
 }
 #tabCategorias > button.nav-link.active {
   transition: background-color 1s ease;
   background-color: #b51fff;
 }
 #tabCategorias > button.nav-link.active p {
-  color: #2b002c;
+  color: #00ee00;
 }
 
 .gray-background {
@@ -446,14 +448,14 @@ p.expander-body {
 .accordion-button:not(.collapsed) {
   box-shadow: none;
   background-color: #b51fff;
-  color: #2b002c;
+  color: #00ee00;
   border-radius: 20px;
 }
 .accordion-button:focus {
   box-shadow: none;
 }
 .accordion-button:hover {
-  color: #2b002c;
+  color: #00ee00;
 }
 
 .rw-btwn, .rw-evnl, .col-evnl {
@@ -518,12 +520,12 @@ select {
   width: 100%;
 }
 select.form-select:focus {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 select:hover {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 
 form label {
@@ -532,54 +534,54 @@ form label {
   color: #ffffff;
 }
 
-input #estrenos, #servicio-est {
+input.form-check-input {
   border-width: 0;
   width: 38px;
   height: 38px;
   margin-top: 0;
 }
-input #estrenos:hover, #servicio-est:hover {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+input.form-check-input:hover {
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 
 input.form-check-input:focus {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 input.form-check-input:hover {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 input.form-check-input:checked {
   background-color: #b51fff;
-  border-color: #b51fff;
+  border-color: #18c435;
 }
 
 .form-check-input:checked {
   background-color: #b51fff;
-  border-color: #b51fff;
+  border-color: #18c435;
 }
 
 textarea#mensaje-contacto {
   height: 83%;
 }
 textarea#mensaje-contacto:focus {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 textarea#mensaje-contacto:hover {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 
 input.form-control:focus {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 input.form-control:hover {
-  border-color: #b51fff;
-  box-shadow: 0 0 0 0.25rem rgba(171, 31, 255, 0.39);
+  border-color: #18c435;
+  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 
 input[type=button], input[type=submit], input[type=reset] {
