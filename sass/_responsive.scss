@@ -42,7 +42,12 @@
     .width-fixed-button-sm { 
         width: 100%; 
     }
-    
+
+    // Ajuste de accesibilidad para botones en mobile
+    .primario, .secundario, .text-link-prp {
+        min-height: 50px;
+    }
+
     // ajustes responsive para pagina de servicios
     .product-card {
         padding: 2rem 1rem 1rem 1rem;
@@ -76,7 +81,7 @@
         height: auto; 
     }
     
-    // retirar hover en icono de primary para mobile
+    // retirar hover en brandlogo de primary para mobile
     a.navbar-brand > img.iconos:hover { 
         transform: none; 
     }

@@ -53,38 +53,39 @@ button { @include btn-reset; @extend %btn-shared; }
         @include transition(background-color); 
         background-color: $color-principal; 
         transform: scale(1.1); }
-    }
+}
     
-    .control-dot { 
-        margin-top: 2rem; 
-        text-align: center; 
-        width: 100%; 
-    }
+.control-dot { 
+    margin-top: 2rem; 
+    text-align: center;
+    width: 100%; 
+}
     
-    #tabCategorias {
-        max-height: 888px; 
+#tabCategorias {
+    max-height: 888px; 
+    border: none; 
+    flex-wrap: nowrap;
+    img { max-width: 378px; }
+    p { color: $color-texto; }
+    > button {
         border: none; 
-        flex-wrap: nowrap;
-        img { max-width: 378px; }
-        p {color: $color-texto;}
-        > button {
-            border: none; 
-            border-radius: $radius-sm; 
-            &:hover { 
-                @include transition(background-color); 
-                background-color: $color-secundario; 
-                transform: scale(0.95);
-                p{
-                    color: $color-texto-secundario;
-                }
+        border-radius: $radius-sm; 
+        &:hover { 
+            @include transition(background-color);
+            @include transition(transform);
+            background-color: $color-secundario; 
+            transform: scale(0.95);
+        }
+        &.nav-link.active { 
+            @include transition(background-color,1s);
+            background-color: $color-principal; 
+            p{
+                color: $color-texto-secundario;
             }
-            &.nav-link.active { 
-                @include transition(background-color,1s); 
-                background-color: $color-principal; 
-                p{
-                    color: $color-texto-secundario;
-                }
+            &:hover {
+                @include transition(transform);
+                transform: scale(0.95);
             }
         }
     }
-    
+}

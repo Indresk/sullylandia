@@ -12,6 +12,7 @@ body {
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     @extend %fondo-animado;
+    overflow-x: hidden;
 }
 
 h1, .main-headline { font-size: 2.5em; font-weight: 700; color: $color-texto;}

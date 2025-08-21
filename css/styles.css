@@ -109,6 +109,7 @@ body {
 body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, .main-headline {
@@ -328,11 +329,9 @@ button {
 }
 #tabCategorias > button:hover {
   transition: background-color 0.5s ease;
+  transition: transform 0.5s ease;
   background-color: #18c435;
   transform: scale(0.95);
-}
-#tabCategorias > button:hover p {
-  color: #00ee00;
 }
 #tabCategorias > button.nav-link.active {
   transition: background-color 1s ease;
@@ -340,6 +339,10 @@ button {
 }
 #tabCategorias > button.nav-link.active p {
   color: #00ee00;
+}
+#tabCategorias > button.nav-link.active:hover {
+  transition: transform 0.5s ease;
+  transform: scale(0.95);
 }
 
 .gray-background {
@@ -540,27 +543,11 @@ input.form-check-input {
   height: 38px;
   margin-top: 0;
 }
-input.form-check-input:hover {
-  border-color: #18c435;
-  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
-}
-
-input.form-check-input:focus {
-  border-color: #18c435;
-  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
-}
-input.form-check-input:hover {
-  border-color: #18c435;
+input.form-check-input:focus, input.form-check-input:hover {
   box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 input.form-check-input:checked {
   background-color: #b51fff;
-  border-color: #18c435;
-}
-
-.form-check-input:checked {
-  background-color: #b51fff;
-  border-color: #18c435;
 }
 
 textarea#mensaje-contacto {
@@ -575,11 +562,7 @@ textarea#mensaje-contacto:hover {
   box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
 
-input.form-control:focus {
-  border-color: #18c435;
-  box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
-}
-input.form-control:hover {
+input.form-control:focus, input.form-control:hover {
   border-color: #18c435;
   box-shadow: 0 0 0 0.25rem rgba(31, 255, 61, 0.39);
 }
@@ -647,6 +630,9 @@ input[type=button], input[type=submit], input[type=reset] {
   }
   .width-fixed-button-sm {
     width: 100%;
+  }
+  .primario, .secundario, .text-link-prp {
+    min-height: 50px;
   }
   .product-card {
     padding: 2rem 1rem 1rem 1rem;
