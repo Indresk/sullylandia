@@ -16,12 +16,16 @@ sullylandia/
 │   ├── styles.css
 │   ├── styles.css.map
 │   └── styles-import.css
+├── js/
+│   └── contacto.js
 ├── pages/
 │   ├── contacto.html
 │   ├── faq.html
 │   ├── noticias.html
 │   ├── ofertas.html
 │   └── servicios.html
+├── php/
+│   └── procesamiento-contacto.php
 ├── sass/
 │   ├── _animations.scss
 │   ├── _base.scss
@@ -47,6 +51,8 @@ sullylandia/
 - **index.html**: Página principal con navegación a todas las secciones.
 - **assets/img/**: Recursos gráficos, logotipos, iconos y fondos.
 - **css/**: Hojas de estilo compiladas desde SASS y fuentes externas.
+- **js/contacto.js**: Lógica para el envío asíncrono del formulario de contacto y gestión de respuestas.
+- **php/procesamiento-contacto.php**: Procesamiento backend del formulario de contacto.
 - **pages/**: Páginas secundarias del sitio (Contacto, FAQ, Noticias, Ofertas, Servicios).
 - **sass/**: Archivos fuente SASS organizados por componentes, utilidades, variables y estilos globales.
 - **Wireframes/**: Prototipos y enlaces a diseños en Figma.
@@ -56,6 +62,8 @@ sullylandia/
 - **SASS**: Organización modular de estilos y compilación a CSS.
 - **Bootstrap 5**: Sistema de grillas y componentes responsivos.
 - **AOS (Animate On Scroll)**: Animaciones en scroll para mejorar la experiencia visual.
+- **JavaScript**: Envío asíncrono de formularios y gestión de UI.
+- **PHP**: Procesamiento de datos del formulario de contacto.
 - **Google Analytics & Search Console**: Integración para métricas y SEO.
 
 ## Requisitos del Proyecto
@@ -69,6 +77,7 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
 - **SASS**: v1.62.x o superior (para compilar los archivos `.scss`)
 - **Bootstrap 5**: Incluido vía CDN en el HTML
 - **AOS**: Incluido vía CDN en el HTML
+- **PHP**: v7.4 o superior (para procesamiento del formulario de contacto)
 
 > Para compilar los estilos, ejecuta en terminal:
 > ```
@@ -79,7 +88,7 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
 
 - Navegación responsiva y sticky.
 - Secciones de servicios, ofertas, noticias y preguntas frecuentes.
-- Formularios de contacto con estilos personalizados.
+- Formularios de contacto con envío asíncrono y mensajes automáticos.
 - Animaciones y transiciones visuales.
 - Soporte para dispositivos móviles y escritorio.
 - Acceso rápido a redes sociales y contacto directo.
@@ -98,6 +107,7 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
     - SASS usado para la compilación del CSS.
     - Frameworks: Bootstrap y AOS.
     - Vinculación a Google Analytics y Google Search Console.
+    - Envío asíncrono de formularios de contacto con JavaScript y PHP.
 
 ### Etapa 2 - Estado / Pendiente:
 - Contenido dinámico.

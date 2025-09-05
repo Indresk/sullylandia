@@ -90,7 +90,8 @@
                     <!-- Form -->
                     <div class="col-12 col-lg-9 product-card">
                         <p class="mb-3">O dejanos tu mensaje aquí y lo responderemos lo más pronto posible:</p>
-                        <form class="container-fluid" action="../php/procesamiento-contacto.php" method="post">
+                        <div id="respuesta"></div>
+                        <form class="container-fluid" id="form-contacto">
                             <div class="row">
                                 <div class="col-12 col-lg-6 gx-0 pe-lg-2">
                                     <label class="form-label" for="nombre">Nombre:</label>
@@ -150,5 +151,7 @@
     </footer>
     <!-- Enlace a los scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- Script de form -->
+    <script src="../js/contacto.js"></script>
 </body>
 </html>
