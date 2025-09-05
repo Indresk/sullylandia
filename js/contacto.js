@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const datos = new FormData(this);
 
-    fetch("../php/procesamiento-contacto.php", { // php en ignore en git por seguridad
+    fetch("../php/procesamiento-contacto.php", {
       method: "POST",
       body: datos
     })
