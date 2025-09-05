@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    require_once __DIR__ . "/../../dbc.php"; // en ignore para no subir a git por seguridad
+    require_once __DIR__ . "/dbc.php"; // en ignore para no subir a git por seguridad
 
     $nombre  = $conn->real_escape_string($_POST['nombre']);
     $mail    = $conn->real_escape_string($_POST['mail']);
