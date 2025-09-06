@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/styles-import.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <!-- Google tag (gtag.js) -->
@@ -68,68 +69,70 @@
     </header>
     <main>
         <!-- Sección de masthead -->
-        <section class="overflow-x-hidden">
-            <div class="mh-scroll-content">
-                <div class="contenedor" id="mh-card-1">
-                    <picture>
-                        <source media="(min-width:992px)" srcset="./assets/img/index/masthead/jellyfin-mh-2850-1140.webp">
-                        <img src="./assets/img/index/masthead/jellyfin-mh-1920-1440.webp" alt="Vistazo rápido del catálogo de películas y series en Jellyfin">
-                    </picture>
-                    <div class="sobre-imagen clm-btwn">
-                        <div class="texto_invert">
-                            <h1 class="mb-3">Jellyfin: Tu Centro Multimedia Personal</h1>
-                            <p class="hide-small">Con Jellyfin, toma el control total de tu entretenimiento. Jellyfin te permite organizar, reproducir y compartir tu propia biblioteca de películas, series, música y fotos, todo desde un único lugar.</p>
-                        </div>
-                        <div class="rw-btwn hide-small">
-                            <div>
-                                <a href="#mh-card-1"><button class="dot-prp"></button></a>
-                                <a href="#mh-card-2"><button class="dot-prp"></button></a>
+        <section class="swiper-mh">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="mh-card-1">
+                    <div class="contenedor">
+                        <picture>
+                            <source media="(min-width:992px)" srcset="./assets/img/index/masthead/jellyfin-mh-2850-1140.webp">
+                            <img src="./assets/img/index/masthead/jellyfin-mh-1920-1440.webp" alt="Vistazo rápido del catálogo de películas y series en Jellyfin">
+                        </picture>
+                        <div class="sobre-imagen clm-btwn">
+                            <div class="texto_invert">
+                                <h1 class="mb-3">Jellyfin: Tu Centro Multimedia Personal</h1>
+                                <p class="hide-small">Con Jellyfin, toma el control total de tu entretenimiento. Jellyfin te permite organizar, reproducir y compartir tu propia biblioteca de películas, series, música y fotos, todo desde un único lugar.</p>
                             </div>
-                            <a href="./pages/servicios.html"><button class="primario">Conoce más</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contenedor" id="mh-card-2">
-                    <picture>
-                        <source media="(min-width:992px)" srcset="./assets/img/index/masthead/telelatino-mh-2850-1140.webp">
-                        <img src="./assets/img/index/masthead/telelatino-mh-1920-1440.webp" alt="Escena de pasión de gavilanes en Tele Latino">
-                    </picture>
-                    <div class="sobre-imagen clm-btwn">
-                        <div class="texto_invert">
-                            <p class="main-headline mb-3">Tele Latino: Tu su pasaporte a la diversidad cultural</p>
-                            <p class="hide-small">Con Tele Latino, usted abre la puerta a un universo de entretenimiento inigualable, diseñado específicamente para satisfacer todos sus gustos y los de su familia.</p>
-                        </div>
-                        <div class="rw-btwn hide-small">
-                            <div>
-                                <a href="#mh-card-1"><button class="dot-prp"></button></a>
-                                <a href="#mh-card-2"><button class="dot-prp"></button></a>
+                            <div class="rw-btwn hide-small">
+                                <div>
+                                    <button class="dot-mh dot-prp" data-slide="0"></button>
+                                    <button class="dot-mh dot-prp" data-slide="1"></button>                                
+                                </div>
+                                <a href="./pages/servicios.html"><button class="primario">Conoce más</button></a>
                             </div>
-                            <a href="./pages/servicios.html"><button class="primario">Conoce más</button></a>
+                        </div>
+                    </div>
+                    <div class="hide-dkt show-small">
+                        <div class="clm-btwn bajo-mh-overlay-sm">
+                            <p>Con Jellyfin, toma el control total de tu entretenimiento. Jellyfin te permite organizar, reproducir y compartir tu propia biblioteca de películas, series, música y fotos, todo desde un único lugar.</p>
+                            <div>
+                                <a href="./pages/servicios.html"><button class="secundario width-fixed-button-sm mb-3">Conoce más</button></a>
+                                <div>
+                                    <button class="dot-mh dot-prp" data-slide="0"></button>
+                                    <button class="dot-mh dot-prp" data-slide="1"></button>                                
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mh-scroll-content">
-                <div class="hide-dkt show-small h-100">
-                    <div class="clm-btwn bajo-mh-overlay-sm h-100">
-                        <p>Con Jellyfin, toma el control total de tu entretenimiento. Jellyfin te permite organizar, reproducir y compartir tu propia biblioteca de películas, series, música y fotos, todo desde un único lugar.</p>
-                        <div>
-                            <a href="./pages/servicios.html"><button class="secundario width-fixed-button-sm mb-3">Conoce más</button></a>
-                            <div>
-                                <a href="#mh-card-1"><button class="dot-prp"></button></a>
-                                <a href="#mh-card-2"><button class="dot-prp"></button></a>
-                               </div>
-                        </div>
+                <div class="swiper-slide" id="mh-card-2">
+                    <div class="contenedor">
+                        <picture>
+                            <source media="(min-width:992px)" srcset="./assets/img/index/masthead/telelatino-mh-2850-1140.webp">
+                            <img src="./assets/img/index/masthead/telelatino-mh-1920-1440.webp" alt="Escena de pasión de gavilanes en Tele Latino">
+                        </picture>
+                        <div class="sobre-imagen clm-btwn">
+                            <div class="texto_invert">
+                                <p class="main-headline mb-3">Tele Latino: Tu su pasaporte a la diversidad cultural</p>
+                                <p class="hide-small">Con Tele Latino, usted abre la puerta a un universo de entretenimiento inigualable, diseñado específicamente para satisfacer todos sus gustos y los de su familia.</p>
+                            </div>
+                            <div class="rw-btwn hide-small">
+                                <div>
+                                    <button class="dot-mh dot-prp" data-slide="0"></button>
+                                    <button class="dot-mh dot-prp" data-slide="1"></button>                                
+                                </div>
+                                <a href="./pages/servicios.html"><button class="primario">Conoce más</button></a>
+                            </div>
+                        </div>    
                     </div>
-                </div>
-                <div class="hide-dkt show-small h-100">
-                    <div class="clm-btwn bajo-mh-overlay-sm h-100">
-                        <p>Con Tele Latino, usted abre la puerta a un universo de entretenimiento inigualable, diseñado específicamente para satisfacer todos sus gustos y los de su familia.</p>
-                        <div>
-                            <a href="./pages/servicios.html"><button class="secundario width-fixed-button-sm mb-3">Conoce más</button></a>
+                    <div class="hide-dkt show-small">
+                        <div class="clm-btwn bajo-mh-overlay-sm">
+                            <p>Con Tele Latino, usted abre la puerta a un universo de entretenimiento inigualable, diseñado específicamente para satisfacer todos sus gustos y los de su familia.</p>
                             <div>
-                                <a href="#mh-card-1"><button class="dot-prp"></button></a>
-                                <a href="#mh-card-2"><button class="dot-prp"></button></a>
+                                <a href="./pages/servicios.html"><button class="secundario width-fixed-button-sm mb-3">Conoce más</button></a>
+                                <div>
+                                    <button class="dot-mh dot-prp" data-slide="0"></button>
+                                    <button class="dot-mh dot-prp" data-slide="1"></button>                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -255,5 +258,8 @@
     <script>
         AOS.init();
     </script>
+    <!-- Enlace a script de swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/scroller-control.js"></script>
 </body>
 </html>

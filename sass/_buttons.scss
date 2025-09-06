@@ -43,13 +43,7 @@ button { @include btn-reset; @extend %btn-shared; }
         transform: scale(1.1); 
     }
     
-    &:focus { 
-        @include transition(background-color); 
-        background-color: $color-principal; 
-        transform: scale(1.1); 
-    }
-    
-    &:active { 
+    &.active { 
         @include transition(background-color); 
         background-color: $color-principal; 
         transform: scale(1.1); }

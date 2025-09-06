@@ -1,22 +1,3 @@
-// transición de mh
-
-.mh-scroll-content {
-    display: grid; 
-    grid-template-columns: repeat(2, 100%);
-    place-content: start; 
-    animation: autoScroll 15s infinite; 
-    animation-timing-function: ease;
-}
-
-@keyframes autoScroll {
-    0%, 45% { 
-        transform: translateX(0); 
-    }
-    55%, 95% { 
-        transform: translateX(-100%); 
-    }
-}
-
 // auto snap de scrollers
 
 .at-snp-srl { 
