@@ -1,0 +1,37 @@
+# Activar motor de reescritura
+RewriteEngine On
+RewriteBase /
+
+#############################################
+
+# /index.html o /index.php → /
+RewriteCond %{THE_REQUEST} \s/index(\.html|\.php)? [NC]
+RewriteRule ^index(\.html|\.php)?$ / [R=301,L]
+
+# /pages/...html → /limpio
+RewriteCond %{THE_REQUEST} \s/pages/([^\s]+)\.html [NC]
+RewriteRule ^pages/(.+)\.html$ /%1 [R=301,L]
+
+# /algo.html → /algo
+RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html [NC]
+RewriteRule ^(.+)\.html$ /%1 [R=301,L]
+
+# /algo.php → /algo
+RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
+RewriteRule ^(.+)\.php$ /%1 [R=301,L]
+
+#############################################
+
+# /algo → pages/algo.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
+RewriteRule ^(.+)$ pages/$1.html [L]
+
+# /algo → pages/algo.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.php -f
+RewriteRule ^(.+)$ pages/$1.php [L]
+
+#############################################
+
+ErrorDocument 404 /pages/404-page.html
