@@ -17,7 +17,8 @@ sullylandia/
 │   ├── styles.css.map
 │   └── styles-import.css
 ├── js/
-│   └── contacto.js
+│   ├── contacto.js
+│   └── scroller-control.js
 ├── pages/
 │   ├── contacto.html
 │   ├── faq.html
@@ -52,6 +53,7 @@ sullylandia/
 - **assets/img/**: Recursos gráficos, logotipos, iconos y fondos.
 - **css/**: Hojas de estilo compiladas desde SASS y fuentes externas.
 - **js/contacto.js**: Lógica para el envío asíncrono del formulario de contacto y gestión de respuestas.
+- **js/scroller-control.js**: Inicialización y configuración de la librería Swiper para sliders y carruseles.
 - **php/procesamiento-contacto.php**: Procesamiento backend del formulario de contacto.
 - **pages/**: Páginas secundarias del sitio (Contacto, FAQ, Noticias, Ofertas, Servicios).
 - **sass/**: Archivos fuente SASS organizados por componentes, utilidades, variables y estilos globales.
@@ -62,6 +64,7 @@ sullylandia/
 - **SASS**: Organización modular de estilos y compilación a CSS.
 - **Bootstrap 5**: Sistema de grillas y componentes responsivos.
 - **AOS (Animate On Scroll)**: Animaciones en scroll para mejorar la experiencia visual.
+- **Swiper.js**: Carruseles y sliders interactivos.
 - **JavaScript**: Envío asíncrono de formularios y gestión de UI.
 - **PHP**: Procesamiento de datos del formulario de contacto.
 - **Google Analytics & Search Console**: Integración para métricas y SEO.
@@ -77,6 +80,7 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
 - **SASS**: v1.62.x o superior (para compilar los archivos `.scss`)
 - **Bootstrap 5**: Incluido vía CDN en el HTML
 - **AOS**: Incluido vía CDN en el HTML
+- **Swiper.js**: Incluido vía CDN en el HTML y gestionado desde `js/scroller-control.js`
 - **PHP**: v7.4 o superior (para procesamiento del formulario de contacto)
 
 > Para compilar los estilos, ejecuta en terminal:
@@ -90,8 +94,10 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
 - Secciones de servicios, ofertas, noticias y preguntas frecuentes.
 - Formularios de contacto con envío asíncrono y mensajes automáticos.
 - Animaciones y transiciones visuales.
+- Carruseles y sliders interactivos con Swiper.js.
 - Soporte para dispositivos móviles y escritorio.
 - Acceso rápido a redes sociales y contacto directo.
+- Enlaces ajustados a rutas absolutas relativas al dominio para mejor experiencia en la página en línea.
 
 ## Estado del Proyecto
 
@@ -108,6 +114,8 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
     - Frameworks: Bootstrap y AOS.
     - Vinculación a Google Analytics y Google Search Console.
     - Envío asíncrono de formularios de contacto con JavaScript y PHP.
+    - Integración de Swiper.js para sliders y carruseles.
+    - Ajuste de enlaces a rutas absolutas relativas al dominio.
 
 ### Etapa 2 - Estado / Pendiente:
 - Contenido dinámico.

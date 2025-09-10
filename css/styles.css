@@ -204,6 +204,11 @@ a > img.iconos:hover {
   transform: scale(1.1);
 }
 
+a.swiper-slide {
+  width: auto;
+  height: 50px;
+}
+
 .contenedor {
   position: relative;
 }

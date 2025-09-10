@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../css/styles-import.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <!-- Google tag (gtag.js) -->
@@ -72,19 +73,27 @@
         <div class="navegacion-sticky container-fluid g-0">
             <div class="gray-background m-3 row align-items-center flex-nowrap">
                 <div class="col-auto text-center g-0 flex-shrink-0">
-                    <img src="../assets/img/shared-assets/Icons/left-arrow-sec-nav.svg" alt="Flecha de desplazamiento lateral izquierda" class="iconos">
+                    <a class="nav-prev"><img src="../assets/img/shared-assets/Icons/nav-arrow-rounded-inverted-left.svg" alt="Flecha de desplazamiento lateral izquierda" class="iconos"></a>
                 </div>
-                <div class="col overflow-auto d-flex justify-content-center at-snp-srl hide-scrollbar">
-                    <div class="d-flex gap-0">
-                        <img src="../assets/img/shared-assets/Icons/prod-icons/netflix_symbol_rgb_fixed.png" alt="Netflix Logo" class="iconos background-icon at-snp-srl-obj">
-                        <img src="../assets/img/shared-assets/Icons/prod-icons/vix_logo-1-1.png" alt="ViX Logo" class="iconos background-icon at-snp-srl-obj">
-                        <img src="../assets/img/shared-assets/Icons/prod-icons/jellyfin-icon.png" alt="Jellyfin Logo" class="iconos current-selected-icon at-snp-srl-obj">
-                        <img src="../assets/img/shared-assets/Icons/prod-icons/plex_logo-1-1.png" alt="Plex Logo" class="iconos background-icon at-snp-srl-obj">
-                        <img src="../assets/img/shared-assets/Icons/prod-icons/telelatino_logo-1-1.png" alt="TeleLatino Logo" class="iconos background-icon at-snp-srl-obj">
+                <div class="swiper-secondary-nav col overflow-auto d-flex hide-scrollbar">
+                    <div class="d-flex gap-0 swiper-wrapper">
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/netflix_symbol_rgb_fixed.png" alt="Netflix Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/vix_logo-1-1.png" alt="ViX Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/netflix_symbol_rgb_fixed.png" alt="Netflix Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/vix_logo-1-1.png" alt="ViX Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/netflix_symbol_rgb_fixed.png" alt="Netflix Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/vix_logo-1-1.png" alt="ViX Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/jellyfin-icon.png" alt="Jellyfin Logo" class="iconos current-selected-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/plex_logo-1-1.png" alt="Plex Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/telelatino_logo-1-1.png" alt="TeleLatino Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/plex_logo-1-1.png" alt="Plex Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/telelatino_logo-1-1.png" alt="TeleLatino Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/plex_logo-1-1.png" alt="Plex Logo" class="iconos background-icon"></a>
+                        <a href="#" class="swiper-slide"><img src="../assets/img/shared-assets/Icons/prod-icons/telelatino_logo-1-1.png" alt="TeleLatino Logo" class="iconos background-icon"></a>
                     </div>
                 </div>
                 <div class="col-auto text-center g-0 flex-shrink-0">
-                    <img src="../assets/img/shared-assets/Icons/right-arrow-sec-nav.svg" alt="Flecha de desplazamiento lateral derecha" class="iconos">
+                    <a class="nav-next"><img src="../assets/img/shared-assets/Icons/nav-arrow-rounded-inverted.svg" alt="Flecha de desplazamiento lateral derecha" class="iconos"></a>
                 </div>
             </div>
         </div>
@@ -220,8 +229,10 @@
             <!-- Sección de sugerencias -->
             <section class="container-fluid">
                 <h2 class="titulo-secundario mt-0">SERVICIOS QUE PUEDEN INTERESARTE</h2>
-                <div class="row flex-nowrap overflow-auto at-snp-srl hide-scrollbar">
-                    <div class="col-9 col-lg-4 at-snp-srl-obj d-flex justify-content-center" id="suggest-card-1" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
+
+                <!-- Desktop -->
+                <div class="row flex-nowrap hide-small">
+                    <div class="col-9 col-lg-4 d-flex justify-content-center" id="suggest-card-1" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
                         <div class="w-75 d-flex flex-column justify-content-center align-items-center">
                             <img class="mb-2" src="../assets/img/index/services/plex-1-1.webp" alt="Plex Pass Logo">
                             <h4>Plex Pass</h4>
@@ -230,14 +241,14 @@
                             <a class="w-100" href="#"><button class="secundario w-100">VER MÁS</button></a>
                         </div> 
                     </div>
-                    <div class="col-9 col-lg-4 text-center at-snp-srl-obj" id="suggest-card-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                    <div class="col-9 col-lg-4 text-center" id="suggest-card-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                         <img class="mb-2" src="../assets/img/index/services/vix-1-1.webp" alt="ViX Premium Logo">
                         <h4>VIX Premium</h4>
                         <p class="mb-0">Precio en oferta:</p>
                         <p>$3,000 COP</p>
                         <a class="w-100" href="#"><button class="secundario w-100">VER MÁS</button></a>
                     </div>
-                    <div class="col-9 col-lg-4 at-snp-srl-obj d-flex justify-content-center" id="suggest-card-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
+                    <div class="col-9 col-lg-4 d-flex justify-content-center" id="suggest-card-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
                         <div class="w-75 d-flex flex-column justify-content-center align-items-center">
                             <img class="mb-2" src="../assets/img/index/services/telelatino-1-1.webp" alt="Tele Latino Logo">
                             <h4>Tele Latino</h4>
@@ -247,10 +258,43 @@
                         </div>
                     </div>
                 </div>
-                <div class="control-dot hide-dkt show-small">
-                    <a href="#suggest-card-1"><button class="dot-prp"></button></a>
-                    <a href="#suggest-card-2"><button class="dot-prp"></button></a>
-                    <a href="#suggest-card-3"><button class="dot-prp"></button></a>
+
+                <!-- Mobile -->
+                <div class="d-block d-lg-none" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
+                    <div class="swiper-sqpi-servicios overflow-x-hidden">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="d-flex justify-content-center swiper-slide h-100">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <img class="mb-2" src="../assets/img/index/services/plex-1-1.webp" alt="Plex Pass Logo">
+                                    <h4>Plex Pass</h4>
+                                    <p class="mb-0">Precio en oferta:</p>
+                                    <p>$6,000 COP</p>
+                                    <a class="w-100" href="#"><button class="secundario w-100">VER MÁS</button></a>
+                                </div> 
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <img class="mb-2" src="../assets/img/index/services/vix-1-1.webp" alt="ViX Premium Logo">
+                                <h4>VIX Premium</h4>
+                                <p class="mb-0">Precio en oferta:</p>
+                                <p>$3,000 COP</p>
+                                <a class="w-100" href="#"><button class="secundario w-100">VER MÁS</button></a>
+                            </div>
+                            <div class="d-flex justify-content-center swiper-slide">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <img class="mb-2" src="../assets/img/index/services/telelatino-1-1.webp" alt="Tele Latino Logo">
+                                    <h4>Tele Latino</h4>
+                                    <p class="mb-0">Precio en oferta:</p>
+                                    <p>$6,000 COP</p>
+                                    <a class="w-100" href="#"><button class="secundario w-100">VER MÁS</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-dot">
+                        <button class="dot-prp sqpi" data-slide="0"></button>
+                        <button class="dot-prp sqpi" data-slide="1"></button>
+                        <button class="dot-prp sqpi" data-slide="2"></button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -296,5 +340,8 @@
     <script>
         AOS.init();
     </script>
+    <!-- Enlace a scripts de Swiper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/scroller-control.js"></script>
 </body>
 </html>
