@@ -16,9 +16,11 @@ RewriteRule ^pages/(.+)\.html$ /%1 [R=301,L]
 RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html [NC]
 RewriteRule ^(.+)\.html$ /%1 [R=301,L]
 
+# Ajuste de .php comentado porque afecta a la vinculación del formulario
+
 # /algo.php → /algo
-RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
-RewriteRule ^(.+)\.php$ /%1 [R=301,L]
+# RewriteCond %{THE_REQUEST} \s/([^\s]+)\.php [NC]
+# RewriteRule ^(.+)\.php$ /%1 [R=301,L]
 
 #############################################
 
