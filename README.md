@@ -10,6 +10,9 @@ Actualmente montado en [InfinityFree](https://www.infinityfree.com/) con el sigu
 sullylandia/
 │
 ├── index.html
+├── .htaccess
+├── robots.txt
+├── sitemap.xml
 ├── README.md
 ├── assets/
 │   └── img/
