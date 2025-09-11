@@ -2,6 +2,8 @@
 
 Diseño, desarrollo e implementación de la página web para SullyLandia.
 
+Actualmente montado en [InfinityFree](https://www.infinityfree.com/) con el siguiente dominio: [https://sullylandia.page.gd/](https://sullylandia.page.gd/)
+
 ## Estructura del Proyecto
 
 ```
