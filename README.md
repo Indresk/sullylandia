@@ -22,6 +22,7 @@ sullylandia/
 │   ├── contacto.js
 │   └── scroller-control.js
 ├── pages/
+│   ├── 404-page.html
 │   ├── contacto.html
 │   ├── faq.html
 │   ├── noticias.html
@@ -100,6 +101,7 @@ Este proyecto es de **uso privado**. No está permitido su distribución, modifi
 - Soporte para dispositivos móviles y escritorio.
 - Acceso rápido a redes sociales y contacto directo.
 - Enlaces ajustados a rutas absolutas relativas al dominio para mejor experiencia en la página en línea.
+- Pagina 404 configurada en el servicio de hosting.
 
 ## Estado del Proyecto
 
